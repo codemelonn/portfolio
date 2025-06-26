@@ -1,27 +1,30 @@
 # macOS system files
 .DS_Store
 
-# Node modules
+# Node.js dependencies
 node_modules/
 
-# Build output
+# Tailwind or PostCSS build output
 dist/
-build/
-out/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# IDEs and editors
-.vscode/
-.idea/
-
-# Misc
 *.log
+
+# dotenv environment files
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# OS/system-specific junk
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Cache
+.cache/
+*.tmp
+*.temp
+
+# Optional: if you're using npm for local server/dev tools
+package-lock.json
