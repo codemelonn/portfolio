@@ -20,12 +20,6 @@ yarn-error.log*
 .env
 .env.local
 
-# Compiled font caches (optional but good hygiene)
-*.woff
-*.woff2
-
 # Other potential artifacts
 *.log
 
-# Ignore built images if they’re temporary
-images/*.gif

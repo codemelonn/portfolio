@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Byte Bounce";
-    src: url("/fonts/ByteBounce.woff2") format("woff2");
+    src: url("/assets/fonts/ByteBounce.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -10,12 +10,11 @@
 @tailwind utilities;
 
 body {
-    height: 800px;
-    font-family: "Byte Bounce";
+    min-height: 100vh;
 }
 
 .main-content {
-    background-image: url(/images/clouds.gif);
+    background-image: url(/assets/images/clouds.gif);
     height: 100vh;
 }
 
@@ -26,27 +25,31 @@ body {
         to right,
         var(--amaranth-pink),
         var(--lavender-blush)
-    ); 
+    );
     color: white;
     font-weight: bold;
     padding: 4px 8px;
-    height: 28px;
+    height: 50px;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff;
 }
 
 .desktop-container footer {
-    background-color: var(--alabaster); 
+    background-color: var(--alabaster);
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #808080;
     padding: 4px 8px;
-    height: 28px;
+    height: 85px;
 }
 
 .desktop-container {
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 600px;
-    width: 850px;
-    margin-top: 5%;
+    top: 50%;
+    left: 50%;
+
+    width: 95vw;
+    max-width: 1200px;
+    height: 95vh;
+    max-height: 850px;
+
+    transform: translate(-50%, -50%);
 }
 
 :root {
