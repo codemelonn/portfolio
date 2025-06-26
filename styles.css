@@ -1,46 +1,82 @@
-@tailwind base; 
-@tailwind components; 
-@tailwind utilities; 
-
-
-body {
-    background-color: #faebd7;
+@font-face {
+    font-family: "Byte Bounce";
+    src: url("/fonts/ByteBounce.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.screen-layer {
-    background-color: #faebd7;
+body {
+    height: 800px;
+    font-family: "Byte Bounce";
+}
+
+.main-content {
+    background-image: url(/images/clouds.gif);
+    height: 100vh;
+}
+
+.desktop-container nav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        to right,
+        var(--amaranth-pink),
+        var(--lavender-blush)
+    ); 
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    height: 28px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff;
+}
+
+.desktop-container footer {
+    background-color: var(--alabaster); 
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #808080;
+    padding: 4px 8px;
+    height: 28px;
+}
+
+.desktop-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 600px;
+    width: 850px;
+    margin-top: 5%;
 }
 
 :root {
     /* Soft Neutrals */
-    --antique-white: #FAEBD7;
-    --alabaster: #EEFEF8;
-  
+    --antique-white: #faebd7;
+    --alabaster: #eefef8;
+
     /* Warm Pinks */
-    --puce: #CC8899;
-    --cherry-blossom-pink: #E9ACBB;
-    --soft-pink: #F5C8C4;
-    --spring-coral: #F59C9A;
-    --peach-fuzz: #FFBE98;
-  
+    --puce: #cc8899;
+    --cherry-blossom-pink: #e9acbb;
+    --soft-pink: #f5c8c4;
+    --spring-coral: #f59c9a;
+    --peach-fuzz: #ffbe98;
+
     /* Light Yellows */
-    --peach: #FCEBBF;
-    --butter-yellow: #FFE7AB;
-  
+    --peach: #fcebbf;
+    --butter-yellow: #ffe7ab;
+
     /* Blues */
-    --columbia-blue: #C9B297;
-    --periwinkle-pale-blue: #9ECCF0;
-    --azure: #D6E6E7;
-  
+    --columbia-blue: #c9b297;
+    --periwinkle-pale-blue: #9eccf0;
+    --azure: #d6e6e7;
+
     /* Greens */
-    --cambridge-blue: #8FBC93;
-    --pistachio-green: #C5DBA9;
-    --citron: #C5CC82;
-    --moss-green: #97A13B;
-  
+    --cambridge-blue: #8fbc93;
+    --pistachio-green: #c5dba9;
+    --citron: #c5cc82;
+    --moss-green: #97a13b;
+
     /* Extras from image text */
-    --amaranth-pink: #E0A3BB;
-    --lavender-blush: #F4DFE6;
-  }
-  
+    --amaranth-pink: #e0a3bb;
+    --lavender-blush: #f4dfe6;
+}

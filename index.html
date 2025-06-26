@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amara's Portfolio</title>
-    <link rel="stylesheet" href="dist/output.css">
-</head>
-<body>
-    <div class="background-container">
-        <div class="welcome-screen-container">
-            <nav></nav>
-            <footer></footer>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Amara's Portfolio</title>
+        <link rel="stylesheet" href="dist/output.css" />
+    </head>
+
+    <body class="font-byteBounce">
+        <div
+            class="background-container bg-antiqueWhite fixed w-screen h-screen z-0"
+        ></div>
+
+        <div class="desktop-container flex flex-col z-1 fixed border">
+
+            <nav class="menu-bar flex justify-start">
+                <div class="menu-bar-text">Amara OS</div>
+            </nav>
+            <div class="main-content z-2 flex-grow bg-columbiaBlue"></div>
+
+            <footer class="flex flex-col justify-end">Footer</footer>
         </div>
-    </div>
-</body>
+    </body>
 </html>
