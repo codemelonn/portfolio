@@ -1,0 +1,46 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities; 
+
+
+body {
+    background-color: #faebd7;
+}
+
+
+.screen-layer {
+    background-color: #faebd7;
+}
+
+:root {
+    /* Soft Neutrals */
+    --antique-white: #FAEBD7;
+    --alabaster: #EEFEF8;
+  
+    /* Warm Pinks */
+    --puce: #CC8899;
+    --cherry-blossom-pink: #E9ACBB;
+    --soft-pink: #F5C8C4;
+    --spring-coral: #F59C9A;
+    --peach-fuzz: #FFBE98;
+  
+    /* Light Yellows */
+    --peach: #FCEBBF;
+    --butter-yellow: #FFE7AB;
+  
+    /* Blues */
+    --columbia-blue: #C9B297;
+    --periwinkle-pale-blue: #9ECCF0;
+    --azure: #D6E6E7;
+  
+    /* Greens */
+    --cambridge-blue: #8FBC93;
+    --pistachio-green: #C5DBA9;
+    --citron: #C5CC82;
+    --moss-green: #97A13B;
+  
+    /* Extras from image text */
+    --amaranth-pink: #E0A3BB;
+    --lavender-blush: #F4DFE6;
+  }
+  
