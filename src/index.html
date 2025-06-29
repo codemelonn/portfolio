@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- tailwind compiled css -->
+        <link rel="stylesheet" href="../dist/output.css" />
+        <!-- JS files-->
+        <title>Amara's Portfolio</title>
+    </head>
+
+    <body class="font-blockBlueprint bg-softPink h-[900px]">
+        <!-- begin screen  -->
+        <!-- main-frame -->
+        <div
+            class="main-frame bg-cherryBlossomPink fixed rounded-lg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1024px] h-[768px] z-0">
+            <!-- main-frame-wrapper -->
+            <div class="main-frame-wrapper flex flex-col">
+                <!-- begin top-bar-container -->
+                <!-- emulates the top part of a desktop -->
+                <div
+                    class="top-bar-container fixed bg-peach z-1 w-[1024px] h-12 rounded-t-lg">
+                    <!-- top bar elements here  -->
+                    <div class="top-bar h-12 flex flex-row text-xl">
+                        <!-- left-side-top-bar -->
+                        <div
+                            class="left-side-top-bar w-[86%] border flex p-2.5 space-x-14">
+                            <p class="pl-3">AMARA OS</p>
+                            <p>ABOUT</p>
+                        </div>
+
+                        <!-- right-side-top-bar -->
+                        <div
+                            class="right-side-top-bar w-[14%] border flex justify-center p-3">
+                            <p id="current-time" class=""></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- begin desktop-container -->
+                <!-- environment to emulate the desktop screen -->
+                <div
+                    class="desktop-container flex flex-row mt-12 h-[calc(768px-48px)] bg-antiqueWhite">
+                    <!-- left-pane -->
+                    <div class="left-pane w-[86%] border flex flex-row justify-center text-center pt-[250px]">
+
+                        <div class="welcome-window z-2 w-[500px] h-[200px] border flex flex-col items-center">
+                            <div class="welcome-header border flex flex-col w-full p-3">
+                                <p>WELCOME TO MY PERSONAL PORTFOLIO</p>
+                            </div>
+                            <div class="welcome-content border flex flex-col w-full h-full ">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam dolores veritatis quas non ipsa rerum officii</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- right-pane -->
+                    <div
+                        class="right-pane w-[14%] border flex flex-col justify-start text-center items-center pt-7">
+                        <!-- begin icon tabs -->
+                        <!-- clickable folders that open windows -->
+
+                        <div class="icon_group">
+                            <img
+                                src="/assets/icons/flop_drive.png"
+                                alt="flop_drive"
+                                class="w-[60px] peer cursor-pointer" />
+                            <p
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                DESKTOP
+                            </p>
+                        </div>
+
+                        <div class="icon_group">
+                            <img
+                                src="/assets/icons/about_me_2.png"
+                                alt="about_me"
+                                class="w-[60px] peer cursor-pointer" />
+                            <p
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                ABOUT ME
+                            </p>
+                        </div>
+                        <div class="icon_group">
+                            <img
+                                src="/assets/icons/projects.png"
+                                alt="project"
+                                class="w-[60px] peer cursor-pointer" />
+                            <p
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                PROJECTS
+                            </p>
+                        </div>
+
+                        <div class="icon_group">
+                            <img
+                                src="/assets/icons/contact_me.png"
+                                alt="contact_me"
+                                class="w-[60px] peer cursor-pointer" />
+                            <p
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                CONTACT ME
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/src/js/desktop_ui.js"></script>
+        <script src="/src/js/window_func.js"></script>
+    </body>
+</html>

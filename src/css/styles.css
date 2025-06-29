@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Byte Bounce";
+    src: url("/assets/fonts/ByteBounce.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Orange Kid"; 
+    src: url("/assets/fonts/Orange\ Kid.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "Retro Byte"; 
+    src: url("/assets/fonts/RetroByte.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "VP Pixel"; 
+    src: url("/assets/fonts/VPPixel-Simplified.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "Computer Pixel"; 
+    src: url("/assets/fonts/computer_pixel-7.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "FF Path"; 
+    src: url("/assets/fonts/FFPathSpect-Regular.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "Block Blueprint"; 
+    src: url("/assets/fonts/Blockblueprint-LV7z5.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.left-pane {
+    
+}
+
+
+
+:root {
+    /* Soft Neutrals */
+    --antique-white: #faebd7;
+    --alabaster: #eefef8;
+
+    /* Warm Pinks */
+    --puce: #cc8899;
+    --cherry-blossom-pink: #e9acbb;
+    --soft-pink: #f5c8c4;
+    --spring-coral: #f59c9a;
+    --peach-fuzz: #ffbe98;
+
+    /* Light Yellows */
+    --peach: #fcebbf;
+    --butter-yellow: #ffe7ab;
+
+    /* Blues */
+    --columbia-blue: #c9b297;
+    --periwinkle-pale-blue: #9eccf0;
+    --azure: #d6e6e7;
+
+    /* Greens */
+    --cambridge-blue: #8fbc93;
+    --pistachio-green: #c5dba9;
+    --citron: #c5cc82;
+    --moss-green: #97a13b;
+
+    /* Extras from image text */
+    --amaranth-pink: #e0a3bb;
+    --lavender-blush: #f4dfe6;
+}

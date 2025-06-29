@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["index.html"],
+    content: ["./src/**/*.html", "./src/**/*.js"],
     theme: {
         colors: {
             antiqueWhite: "#faebd7",
@@ -30,6 +30,13 @@ module.exports = {
 
         fontFamily: {
             byteBounce: ['"Byte Bounce"', "sans-serif"],
+            orangeKid: ['"Orange Kid"', "sans-serif"], 
+            retroByte: ['"Retro Byte"', "sans-serif"], 
+            vpPixel: ['"VP Pixel"', "sans-serif"], 
+            computerPixel: ['"Computer Pixel"', "sans-serif"], 
+            ffPath: ['"FF Path"', "sans-serif"], 
+            blockBlueprint: ['"Block Blueprint"', "sans-serif"], 
+            
         },
 
         extend: {},
