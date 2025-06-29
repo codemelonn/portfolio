@@ -7,20 +7,31 @@
         <link rel="stylesheet" href="dist/output.css" />
     </head>
 
-    <body class="font-byteBounce">
+    <body class="font-byteBounce bg-softPink h-[900px]">
+        <!-- begin screen  -->
         <div
-            class="background-container bg-antiqueWhite fixed w-screen h-screen z-0"
-        ></div>
-
-        <div
-            class="desktop-container flex flex-col justify-between z-1 fixed border"
+            class="main-frame bg-cherryBlossomPink fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1024px] h-[768px] z-0"
         >
-            <nav class="menu-bar flex justify-start">
-                <div class="menu-bar-text">Amara OS</div>
-            </nav>
-            <div class="main-content z-2 flex-grow bg-columbiaBlue"></div>
+            <div class="main-frame-wrapper flex flex-col">
+                <!-- begin top-bar -->
+                <!-- emulates the top part of a desktop -->
+                <div
+                    class="top-bar fixed bg-peach z-1 w-[1024px] h-12 rounded-t-lg"
+                ></div>
 
-            <footer class="flex flex-col justify-end">Footer</footer>
+                <!-- begin desktop-container -->
+                <!-- environment to emulate the desktop screen -->
+                <div class="desktop-container flex flex-row mt-12 h-[calc(768px-48px)] bg-antiqueWhite">
+                    <div class="left-pane w-[86%] border"></div>
+                    <div class="right-pane w-[14%] border">
+
+                        <!-- begin icon tabs -->
+                        <!-- clickable folders that open windows --> 
+
+                        <img src="/assets/images/folder_open.png" alt="folder_open" class="h-[110px]">    
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
