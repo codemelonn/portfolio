@@ -41,16 +41,15 @@
     font-style: normal;
 }
 
+@import './window.css'; 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-.left-pane {
-    
+.pane-filler {
+    box-shadow: 4px -4px 6px rgba(255, 192, 203, 0.4);
 }
-
-
 
 :root {
     /* Soft Neutrals */
@@ -82,4 +81,9 @@
     /* Extras from image text */
     --amaranth-pink: #e0a3bb;
     --lavender-blush: #f4dfe6;
+
+    /* window colors */ 
+    --sweet-pink: #f1d1da; 
+    --window-grey: #bebbb0; 
+    --title-pink: #eeb1bf; 
 }

@@ -1,0 +1,36 @@
+
+/* window.css is a styling page I will reuse to style my retro windows*/
+
+
+.window {
+    border: 2px solid var(--window-grey);
+    background-color: var(--window-grey);
+    box-shadow: inset -1px -1px white, inset 1px 1px #555;
+    padding: 1px;
+}
+  
+.title-bar {
+    background: linear-gradient(to right, var(--title-pink), var(--sweet-pink));
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+    padding: 4px 8px;
+    box-shadow: inset -1px -1px #d389a0, inset 1px 1px white;
+}
+  
+.title-bar-controls button {
+    border: 2px outset #ccc;
+    background: var(--window-grey);
+    font-weight: bold;
+    font-family: monospace;
+    padding: 0 6px;
+}
+  
+.window-body {
+    padding: 10px;
+    background-color: var(--window-grey);
+}
+  

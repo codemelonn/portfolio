@@ -26,6 +26,10 @@ module.exports = {
 
             amaranthPink: "#e0a3bb",
             lavenderBlush: "#f4dfe6",
+
+            sweetPink: "#f1d1da", 
+            windowGrey: "#bebbb0", 
+            titlePink: "#eeb1bf", 
         },
 
         fontFamily: {

@@ -6,6 +6,7 @@
 
         <!-- tailwind compiled css -->
         <link rel="stylesheet" href="../dist/output.css" />
+        <link rel="stylesheet" href="/src/css/window.css" />
         <!-- JS files-->
         <title>Amara's Portfolio</title>
     </head>
@@ -20,19 +21,20 @@
                 <!-- begin top-bar-container -->
                 <!-- emulates the top part of a desktop -->
                 <div
-                    class="top-bar-container fixed bg-peach z-1 w-[1024px] h-12 rounded-t-lg">
+                    class="top-bar-container fixed bg-[#e1d9d4] drop-shadow-lg z-1 w-[1024px] h-12 rounded-t-lg">
                     <!-- top bar elements here  -->
                     <div class="top-bar h-12 flex flex-row text-xl">
                         <!-- left-side-top-bar -->
                         <div
-                            class="left-side-top-bar w-[86%] border flex p-2.5 space-x-14">
+                            class="left-side-top-bar w-[86%] flex p-2.5 space-x-14">
                             <p class="pl-3">AMARA OS</p>
                             <p>ABOUT</p>
+                            <p>LINKS</p>
                         </div>
 
                         <!-- right-side-top-bar -->
                         <div
-                            class="right-side-top-bar w-[14%] border flex justify-center p-3">
+                            class="right-side-top-bar w-[14%] flex justify-center p-3">
                             <p id="current-time" class=""></p>
                         </div>
                     </div>
@@ -41,25 +43,31 @@
                 <!-- begin desktop-container -->
                 <!-- environment to emulate the desktop screen -->
                 <div
-                    class="desktop-container flex flex-row mt-12 h-[calc(768px-48px)] bg-antiqueWhite">
+                    class="desktop-container flex flex-row mt-12 h-[calc(768px-48px)] bg-lavenderBlush">
                     <!-- left-pane -->
-                    <div class="left-pane w-[86%] border flex flex-row justify-center text-center pt-[250px]">
-
-                        <div class="welcome-window z-2 w-[500px] h-[200px] border flex flex-col items-center">
-                            <div class="welcome-header border flex flex-col w-full p-3">
-                                <p>WELCOME TO MY PERSONAL PORTFOLIO</p>
+                    <div
+                        class="left-pane w-[86%] flex flex-row justify-center text-center pt-[250px]">
+                        <!-- Pane filler -->
+                        <div
+                            class="pane-filler bg-antiqueWhite absolute bottom-0 left-0 w-[865px] h-[690px] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"></div>
+                        <div class="window z-10 w-[500px] h-[200px]">
+                            <div class="title-bar">
+                                <div class="title-bar-text">Welcome</div>
+                                <div class="title-bar-controls">
+                                    <button aria-label="Minimize">_</button>
+                                    <button aria-label="Maximize">□</button>
+                                    <button aria-label="Close">✕</button>
+                                </div>
                             </div>
-                            <div class="welcome-content border flex flex-col w-full h-full ">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam dolores veritatis quas non ipsa rerum officii</p>
+                            <div class="window-body">
+                                <p>Hello there!</p>
                             </div>
-
                         </div>
-
                     </div>
 
                     <!-- right-pane -->
                     <div
-                        class="right-pane w-[14%] border flex flex-col justify-start text-center items-center pt-7">
+                        class="right-pane w-[14%] flex flex-col justify-start text-center items-center pt-7">
                         <!-- begin icon tabs -->
                         <!-- clickable folders that open windows -->
 
@@ -69,7 +77,7 @@
                                 alt="flop_drive"
                                 class="w-[60px] peer cursor-pointer" />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-[#5f6368] peer-hover:underline peer-hover:drop-shadow-md">
                                 DESKTOP
                             </p>
                         </div>
@@ -80,7 +88,7 @@
                                 alt="about_me"
                                 class="w-[60px] peer cursor-pointer" />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-[#5f6368] peer-hover:underline peer-hover:drop-shadow-md">
                                 ABOUT ME
                             </p>
                         </div>
@@ -90,7 +98,7 @@
                                 alt="project"
                                 class="w-[60px] peer cursor-pointer" />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-[#5f6368] peer-hover:underline peer-hover:drop-shadow-md">
                                 PROJECTS
                             </p>
                         </div>
@@ -101,7 +109,7 @@
                                 alt="contact_me"
                                 class="w-[60px] peer cursor-pointer" />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-cherryBlossomPink peer-hover:underline">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-[#5f6368] peer-hover:underline peer-hover:drop-shadow-md">
                                 CONTACT ME
                             </p>
                         </div>
