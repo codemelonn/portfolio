@@ -40,6 +40,22 @@ module.exports = {
             bodyTan3: "#a99890", 
             iceBlue: "#cdd7dd", 
             iceBlueDark: "#748191", 
+
+            retroShellPink: "#F4D1D2",
+            dustyBlush: "#E8B4BC",
+            velvetMauve: "#B97C86",
+            smokyQuartz: "#6B5B63",
+            palePebble: "#F8F6F3",
+            steelRose: "#9F8B94",
+            powderLilac: "#D4C4DC",
+            digitalGrape: "#7B6F96",
+            apricotCream: "#FBE8DE",
+
+            blushMilk: "#F6D3D6",
+            petalMauve: "#D7A3AB",
+            almondCream: "#FDF5F3",
+            fogLilac: "#EDE6F2",
+            petalFog: "#F4E8F2",
         },
 
         fontFamily: {

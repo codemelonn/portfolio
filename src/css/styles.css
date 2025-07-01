@@ -98,6 +98,26 @@
     --ice-blue: #cdd7dd; 
     --ice-blue-dark: #748191; 
 
+    /* more experimental colors*/ 
+    --retro-shell-pink: #F4D1D2;
+    --dusty-blush: #E8B4BC;
+    --velvet-mauve: #B97C86;
+    --smoky-quartz: #6B5B63;
+    --pale-pebble: #F8F6F3;
+    --steel-rose: #9F8B94;
+    --powder-lilac: #D4C4DC;
+    --digital-grape: #7B6F96;
+    --soft-ink: #413D4D;
+    --apricot-cream: #FBE8DE;
+
+    --blush-milk: #F6D3D6;
+    --petal-mauve: #D7A3AB;
+    --almond-cream: #FDF5F3;
+    --fog-lilac: #EDE6F2;
+    --petal-fog: #F4E8F2;
+    --light-edge: #fef1f3;  
+    --dark-edge: #a78b9f;    
+
 
 
 }

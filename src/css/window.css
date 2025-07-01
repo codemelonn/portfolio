@@ -3,14 +3,21 @@
 
 
 .window {
-    border: 2px solid var(--body-tan-3);
-    background-color: var(--body-tan);
-    box-shadow: inset -1px -1px white, inset 1px 1px #555;
-    padding: 1px;
-}
+    background-color: var(--blush-milk);
+    padding: 2px;
+    box-shadow:
+      1px 1px 0 var(--dark-edge),        /* bottom-right outer */
+      -1px -1px 0 var(--light-edge),     /* top-left outer */
+      2px 2px 0 var(--smoky-quartz),     /* stronger depth */
+      -2px -2px 0 var(--light-edge),     /* soft lift */
+      inset 1px 1px 0 var(--dark-edge),  /* inner shadow */
+      inset -1px -1px 0 var(--light-edge); /* inner highlight */
+    border: 1px solid var(--fog-lilac);
+  }
+   
   
 .title-bar {
-    background: linear-gradient(to right, var(--header-grey), var(--header-grey));
+    background: linear-gradient(to right, var(--petal-mauve), var(--petal-mauve));
     color: white;
     font-weight: bold;
     display: flex;
@@ -18,19 +25,27 @@
     justify-content: space-between;
     height: 28px;
     padding: 4px 8px;
-    box-shadow: inset -1px -1px var(--body-tan-3), inset 1px 1px white;
+    box-shadow: 
+        inset -1px -1px #ffffff, 
+        inset 1px 1px var(--blush-milk);
 }
   
 .title-bar-controls button {
-    border: 2px outset #ccc;
-    background: var(--body-tan-2);
+    border: 2px outset var(--almond-cream);
+    background: var(--apricot-cream);
+    color: var(--dark-edge);
     font-weight: bold;
     font-family: monospace;
     padding: 0 6px;
+    box-shadow: 0.5px 0.5px var(--fog-lilac);
 }
   
 .window-body {
     padding: 10px;
-    background-color: var(--body-tan);
+    background-color: var(--almond-cream);
+    color: var(--soft-ink);
+    box-shadow:
+    inset -1px -1px #fff,
+    inset 1px 1px var(--fog-lilac);
 }
   
