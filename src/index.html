@@ -11,18 +11,16 @@
         <title>Amara's Portfolio</title>
     </head>
 
-
-    <body class="font-blockBlueprint bg-retroShellPink h-[900px]">
+    <body class="font-blockBlueprint bg-retroShellPink min-w-full min-h-screen">
         <!-- begin screen  -->
         <!-- main-frame -->
-        <div
-            class="main-frame fixed rounded-lg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1024px] h-[768px] z-0">
+        <div class="main-frame fixed rounded-lg z-0 w-screen h-screen">
             <!-- main-frame-wrapper -->
-            <div class="main-frame-wrapper flex flex-col">
+            <div class="main-frame-wrapper flex flex-col h-full">
                 <!-- begin top-bar-container -->
                 <!-- emulates the top part of a desktop -->
                 <div
-                    class="top-bar-container fixed bg-[#e7e7e7] drop-shadow-lg z-1 w-[1024px] h-9 rounded-t-lg">
+                    class="top-bar-container fixed bg-[#e7e7e7] drop-shadow-lg z-1 w-full h-9 rounded-t-lg">
                     <!-- top bar elements here  -->
                     <div class="top-bar h-9 flex flex-row text-xl">
                         <!-- left-side-top-bar -->
@@ -44,13 +42,13 @@
                 <!-- begin desktop-container -->
                 <!-- environment to emulate the desktop screen -->
                 <div
-                    class="desktop-container flex flex-row mt-9 h-[calc(768px-36px)] bg-palePebble">
+                    class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-palePebble">
                     <!-- left-pane -->
                     <div
-                        class="left-pane w-[86%] flex flex-row justify-center text-center pt-[250px]">
+                        class="left-pane w-[86%] flex flex-row justify-center text-center pt-[15%]">
                         <!-- Pane filler -->
                         <div
-                            class="pane-filler bg-petalFog absolute bottom-0 left-0 w-[865px] h-[690px] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"></div>
+                            class="pane-filler bg-petalFog absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"></div>
                         <div class="window z-10 w-[500px] h-[200px]">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3">
@@ -76,9 +74,9 @@
 
                         <div class="icon_group">
                             <img
-                                src="/assets/icons/flop_drive.png"
+                                src="/assets/icons/desktop2.png"
                                 alt="flop_drive"
-                                class="w-[60px] peer cursor-pointer" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 DESKTOP
@@ -87,9 +85,9 @@
 
                         <div class="icon_group">
                             <img
-                                src="/assets/icons/about_me_2.png"
+                                src="/assets/icons/text_file_2.png  "
                                 alt="about_me"
-                                class="w-[60px] peer cursor-pointer" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 ABOUT ME
@@ -97,9 +95,9 @@
                         </div>
                         <div class="icon_group">
                             <img
-                                src="/assets/icons/projects.png"
+                                src="/assets/icons/projects2.png"
                                 alt="project"
-                                class="w-[60px] peer cursor-pointer" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 PROJECTS
@@ -108,9 +106,9 @@
 
                         <div class="icon_group">
                             <img
-                                src="/assets/icons/contact_me3.png"
+                                src="/assets/icons/contact_me2.png"
                                 alt="contact_me"
-                                class="w-[60px] peer cursor-pointer" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 CONTACT ME
