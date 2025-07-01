@@ -48,7 +48,7 @@
 
 
 .pane-filler {
-    box-shadow: 4px -4px 6px rgba(255, 192, 203, 0.4);
+    box-shadow: 4px -4px 6px rgba(0, 0, 0, 0.09);
 }
 
 :root {
@@ -86,4 +86,18 @@
     --sweet-pink: #f1d1da; 
     --window-grey: #bebbb0; 
     --title-pink: #eeb1bf; 
+
+    /* experimental colors*/
+    --header-grey: #9c9a97; 
+    --header-orange: #eea971; 
+    --body-tan: #c7afa8; 
+    --header-blue: #4f8fab; 
+    --mauve: #b9868d; 
+    --body-tan-2: #c8b1a8; 
+    --body-tan-3: #a99890; 
+    --ice-blue: #cdd7dd; 
+    --ice-blue-dark: #748191; 
+
+
+
 }

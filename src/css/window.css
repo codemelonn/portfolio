@@ -3,14 +3,14 @@
 
 
 .window {
-    border: 2px solid var(--window-grey);
-    background-color: var(--window-grey);
+    border: 2px solid var(--body-tan-3);
+    background-color: var(--body-tan);
     box-shadow: inset -1px -1px white, inset 1px 1px #555;
     padding: 1px;
 }
   
 .title-bar {
-    background: linear-gradient(to right, var(--title-pink), var(--sweet-pink));
+    background: linear-gradient(to right, var(--header-grey), var(--header-grey));
     color: white;
     font-weight: bold;
     display: flex;
@@ -18,12 +18,12 @@
     justify-content: space-between;
     height: 28px;
     padding: 4px 8px;
-    box-shadow: inset -1px -1px #d389a0, inset 1px 1px white;
+    box-shadow: inset -1px -1px var(--body-tan-3), inset 1px 1px white;
 }
   
 .title-bar-controls button {
     border: 2px outset #ccc;
-    background: var(--window-grey);
+    background: var(--body-tan-2);
     font-weight: bold;
     font-family: monospace;
     padding: 0 6px;
@@ -31,6 +31,6 @@
   
 .window-body {
     padding: 10px;
-    background-color: var(--window-grey);
+    background-color: var(--body-tan);
 }
   

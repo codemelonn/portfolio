@@ -30,6 +30,16 @@ module.exports = {
             sweetPink: "#f1d1da", 
             windowGrey: "#bebbb0", 
             titlePink: "#eeb1bf", 
+
+            headerGrey: "#9c9a97", 
+            headerOrange: "#eea971", 
+            headerBlue: "#4f8fab", 
+            mauve: "#b9868d", 
+            bodyTan: "#c7afa8", 
+            bodyTan2: "#c8b1a8", 
+            bodyTan3: "#a99890", 
+            iceBlue: "#cdd7dd", 
+            iceBlueDark: "#748191", 
         },
 
         fontFamily: {
