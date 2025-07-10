@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="../dist/output.css" />
         <link rel="stylesheet" href="/src/css/window.css" />
 
-
         <title>Amara's Portfolio</title>
     </head>
 
@@ -49,8 +48,12 @@
                         class="left-pane w-[86%] flex flex-row justify-center text-center pt-[15%]">
                         <!-- Pane filler -->
                         <div
-                            class="pane-filler bg-petalFog absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"></div>
-                        <div id="welcome-screen" class="window z-10 w-[500px] h-[200px]">
+                            class="pane-filler bg-lavenderBlush absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"></div>
+
+                        <!-- Welcome Screen -->
+                        <div
+                            id="welcome-screen"
+                            class="window z-10 w-[500px] h-[200px]">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3">
                                     WELCOME TO MY PORTFOLIO
@@ -58,13 +61,22 @@
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" id="close-window">✕</button>
+                                    <button
+                                        aria-label="Close"
+                                        id="close-window">
+                                        ✕
+                                    </button>
                                 </div>
                             </div>
                             <div class="window-body">
                                 <p>Hello there! My name is Amara and</p>
                             </div>
                         </div>
+
+                        <div class="skills-div"></div>
+                        <div class="about-me-div"></div>
+                        <div class="projects-div"></div>
+                        <div class="contact-me-div"></div>
                     </div>
 
                     <!-- right-pane -->
@@ -73,7 +85,10 @@
                         <!-- begin icon tabs -->
                         <!-- clickable folders that open windows -->
 
-                        <div class="icon_group" data-page="skills" data-title="SKILLS">
+                        <div
+                            class="icon_group"
+                            data-page="skills"
+                            data-title="SKILLS">
                             <img
                                 src="/assets/icons/computer.png"
                                 alt="flop_drive"
@@ -84,7 +99,10 @@
                             </p>
                         </div>
 
-                        <div class="icon_group" data-page="about_me" data-title="ABOUT ME">
+                        <div
+                            class="icon_group"
+                            data-page="about_me"
+                            data-title="ABOUT ME">
                             <img
                                 src="/assets/icons/text_file.png  "
                                 alt="about_me"
@@ -94,7 +112,10 @@
                                 ABOUT ME
                             </p>
                         </div>
-                        <div class="icon_group" data-page="projects" data-title="PROJECTS">
+                        <div
+                            class="icon_group"
+                            data-page="projects"
+                            data-title="PROJECTS">
                             <img
                                 src="/assets/icons/projects.png"
                                 alt="project"
@@ -105,7 +126,10 @@
                             </p>
                         </div>
 
-                        <div class="icon_group" data-page="contact_me" data-title="CONTACT ME">
+                        <div
+                            class="icon_group"
+                            data-page="contact_me"
+                            data-title="CONTACT ME">
                             <img
                                 src="/assets/icons/contact_me.png"
                                 alt="contact_me"
