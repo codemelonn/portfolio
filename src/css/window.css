@@ -13,12 +13,13 @@
       inset 1px 1px 0 var(--dark-edge),  /* inner shadow */
       inset -1px -1px 0 var(--light-edge); /* inner highlight */
     border: 1px solid var(--fog-lilac);
-  }
+}
    
   
 .title-bar {
     background: linear-gradient(to right, var(--petal-mauve), var(--petal-mauve));
     color: white;
+    cursor: move;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -48,4 +49,3 @@
     inset -1px -1px #fff,
     inset 1px 1px var(--fog-lilac);
 }
-  

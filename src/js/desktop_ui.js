@@ -10,3 +10,8 @@ function updateCurrTime(x) {
     const time = new Date();
     x.textContent = time.toLocaleTimeString();
 }
+
+
+// icon-group functionality 
+// onClick events 
+

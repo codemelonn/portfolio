@@ -23,6 +23,7 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
+    "interactjs": "^1.10.27",
     "winbox": "^0.2.82"
   }
 }
