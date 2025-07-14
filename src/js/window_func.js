@@ -34,8 +34,29 @@ document.getElementById("close-window").addEventListener("click", function () {
 });
 
 // fetching html for each page
-const target = document.querySelector(".about-me-div");
 
-const loadhtml = (name) => {
-    fetch("./src/pages/");
-};
+try {
+    
+    const loadhtml = name => {
+        const target = document.querySelector(`.window[data-page="${name}"] .window-body`);
+        fetch(`./pages/${name}.html`)
+            .then(res => {
+                if(!res.ok) {
+                    throw new Error("Error!");
+                } else {
+                    return res.text(); 
+                }
+            }) 
+            .then(htmlFile => {
+                target.innerHTML = htmlFile; 
+                target.style.zIndex = this.target.style.zIndex + 1;
+            });
+    };
+    
+
+} catch (error) {
+    console.error(error); 
+}
+
+
+

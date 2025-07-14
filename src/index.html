@@ -73,10 +73,67 @@
                             </div>
                         </div>
 
-                        <div class="skills-div"></div>
-                        <div class="about-me-div"></div>
-                        <div class="projects-div"></div>
-                        <div class="contact-me-div"></div>
+                        <div class="window z-10 w-[700px] h-[300px]" data-page="skills">
+                            <div class="title-bar">
+                                <div class="title-bar-text pl-3"></div>
+                                <div class="title-bar-controls">
+                                    <button aria-label="Minimize">_</button>
+                                    <button aria-label="Maximize">□</button>
+                                    <button
+                                        aria-label="Close"
+                                        id="close-window">
+                                        ✕
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="window-body"></div>
+                        </div>
+
+                        <div class="window z-10" data-page="about_me">
+                            <div class="title-bar">
+                                <div class="title-bar-text pl-3"></div>
+                                <div class="title-bar-controls">
+                                    <button aria-label="Minimize">_</button>
+                                    <button aria-label="Maximize">□</button>
+                                    <button
+                                        aria-label="Close"
+                                        id="close-window">
+                                        ✕
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="window-body"></div>
+                        </div>
+                        <div class="window z-10" data-page="projects">
+                            <div class="title-bar">
+                                <div class="title-bar-text pl-3"></div>
+                                <div class="title-bar-controls">
+                                    <button aria-label="Minimize">_</button>
+                                    <button aria-label="Maximize">□</button>
+                                    <button
+                                        aria-label="Close"
+                                        id="close-window">
+                                        ✕
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="window-body"></div>
+                        </div>
+                        <div class="window z-10" data-page="contact_me">
+                            <div class="title-bar">
+                                <div class="title-bar-text pl-3"></div>
+                                <div class="title-bar-controls">
+                                    <button aria-label="Minimize">_</button>
+                                    <button aria-label="Maximize">□</button>
+                                    <button
+                                        aria-label="Close"
+                                        id="close-window">
+                                        ✕
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="window-body"></div>
+                        </div>
                     </div>
 
                     <!-- right-pane -->
@@ -88,11 +145,12 @@
                         <div
                             class="icon_group"
                             data-page="skills"
-                            data-title="SKILLS">
+                            >
                             <img
                                 src="/assets/icons/computer.png"
                                 alt="flop_drive"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                onclick="loadhtml('skills')" />
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 SKILLS
@@ -102,11 +160,13 @@
                         <div
                             class="icon_group"
                             data-page="about_me"
-                            data-title="ABOUT ME">
+                            >
                             <img
                                 src="/assets/icons/text_file.png  "
                                 alt="about_me"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain" 
+                                onclick="loadhtml('about_me')"/>
+                                
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 ABOUT ME
@@ -119,7 +179,8 @@
                             <img
                                 src="/assets/icons/projects.png"
                                 alt="project"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain" 
+                                onclick="loadhtml('projects')"/>
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 PROJECTS
@@ -133,7 +194,8 @@
                             <img
                                 src="/assets/icons/contact_me.png"
                                 alt="contact_me"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain" />
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                onclick="loadhtml('contact_me')" />
                             <p
                                 class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
                                 CONTACT ME
