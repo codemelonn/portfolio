@@ -9,10 +9,8 @@ interact(".window").draggable({
     listeners: {
         move(event) {
             const target = event.target;
-            const x =
-                (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-            const y =
-                (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+            const x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+            const y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
 
             target.style.transform = `translate(${x}px, ${y}px)`;
             target.setAttribute("data-x", x);
@@ -35,28 +33,39 @@ document.getElementById("close-window").addEventListener("click", function () {
 
 // fetching html for each page
 
-try {
-    
-    const loadhtml = name => {
-        const target = document.querySelector(`.window[data-page="${name}"] .window-body`);
-        fetch(`./pages/${name}.html`)
-            .then(res => {
-                if(!res.ok) {
-                    throw new Error("Error!");
-                } else {
-                    return res.text(); 
-                }
-            }) 
-            .then(htmlFile => {
-                target.innerHTML = htmlFile; 
-                target.style.zIndex = this.target.style.zIndex + 1;
-            });
-    };
-    
+let zIndexCounter = 100; 
 
-} catch (error) {
-    console.error(error); 
+async function loadhtml(name) {
+
+    const container = document.querySelector(`.window[data-page="${name}"]`);
+    const body = container?.querySelector(".window-body");
+    const title = container?.querySelector(".title-bar-text");
+
+    if (!container || !body || !title) {
+        console.error(`Missing target for ${name}`);
+        return;
+    }
+    // Show the window
+    container.style.display = "block";
+
+    // Bring to front
+    container.style.zIndex = ++zIndexCounter;
+
+    // Optional: update title bar
+    title.textContent = name.replace("_", " ").toUpperCase();
+
+    // Load page content
+    try {
+        const res = await fetch(`./pages/${name}.html`);
+        if (!res.ok) throw new Error(`Failed to load ${name}`);
+        const html = await res.text();
+        body.innerHTML = html;
+    } catch (err) {
+        console.error(err);
+    }
+
+    // Make this window come to front on click
+    container.addEventListener("mousedown", () => {
+        container.style.zIndex = ++zIndexCounter;
+    });
 }
-
-
-

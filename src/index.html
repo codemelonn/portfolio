@@ -20,20 +20,19 @@
                 <!-- begin top-bar-container -->
                 <!-- emulates the top part of a desktop -->
                 <div
-                    class="top-bar-container fixed bg-[#e7e7e7] drop-shadow-lg z-1 w-full h-9 rounded-t-lg">
+                    class="top-bar-container fixed bg-[#e7e7e7] drop-shadow-lg z-1 w-full h-9 rounded-t-lg"
+                >
                     <!-- top bar elements here  -->
                     <div class="top-bar h-9 flex flex-row text-xl">
                         <!-- left-side-top-bar -->
-                        <div
-                            class="left-side-top-bar w-[86%] flex space-x-14 items-center">
+                        <div class="left-side-top-bar w-[86%] flex space-x-14 items-center">
                             <p class="pl-3">AMARA OS</p>
                             <p>ABOUT</p>
                             <p>LINKS</p>
                         </div>
 
                         <!-- right-side-top-bar -->
-                        <div
-                            class="right-side-top-bar w-[14%] flex justify-center items-center">
+                        <div class="right-side-top-bar w-[14%] flex justify-center items-center">
                             <p id="current-time" class=""></p>
                         </div>
                     </div>
@@ -42,30 +41,26 @@
                 <!-- begin desktop-container -->
                 <!-- environment to emulate the desktop screen -->
                 <div
-                    class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-palePebble">
+                    class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-palePebble"
+                >
                     <!-- left-pane -->
                     <div
-                        class="left-pane w-[86%] flex flex-row justify-center text-center pt-[15%]">
+                        class="left-pane w-[86%] flex flex-row justify-center text-center pt-[15%]"
+                    >
                         <!-- Pane filler -->
                         <div
-                            class="pane-filler bg-lavenderBlush absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"></div>
+                            class="pane-filler bg-lavenderBlush absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"
+                        ></div>
+                        ˚
 
                         <!-- Welcome Screen -->
-                        <div
-                            id="welcome-screen"
-                            class="window z-10 w-[500px] h-[200px]">
+                        <div id="welcome-screen" class="window z-10 w-[500px] h-[200px]">
                             <div class="title-bar">
-                                <div class="title-bar-text pl-3">
-                                    WELCOME TO MY PORTFOLIO
-                                </div>
+                                <div class="title-bar-text pl-3">WELCOME TO MY PORTFOLIO</div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button
-                                        aria-label="Close"
-                                        id="close-window">
-                                        ✕
-                                    </button>
+                                    <button aria-label="Close" id="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body">
@@ -79,11 +74,7 @@
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button
-                                        aria-label="Close"
-                                        id="close-window">
-                                        ✕
-                                    </button>
+                                    <button aria-label="Close" id="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
@@ -95,11 +86,7 @@
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button
-                                        aria-label="Close"
-                                        id="close-window">
-                                        ✕
-                                    </button>
+                                    <button aria-label="Close" id="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
@@ -110,11 +97,7 @@
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button
-                                        aria-label="Close"
-                                        id="close-window">
-                                        ✕
-                                    </button>
+                                    <button aria-label="Close" id="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
@@ -125,11 +108,7 @@
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button
-                                        aria-label="Close"
-                                        id="close-window">
-                                        ✕
-                                    </button>
+                                    <button aria-label="Close" id="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
@@ -138,66 +117,63 @@
 
                     <!-- right-pane -->
                     <div
-                        class="right-pane w-[14%] flex flex-col justify-start text-center items-center pt-10">
+                        class="right-pane w-[14%] flex flex-col justify-start text-center items-center pt-10"
+                    >
                         <!-- begin icon tabs -->
                         <!-- clickable folders that open windows -->
 
-                        <div
-                            class="icon_group"
-                            data-page="skills"
-                            >
+                        <div class="icon_group" data-page="skills">
                             <img
                                 src="/assets/icons/computer.png"
                                 alt="flop_drive"
                                 class="w-[50px] peer cursor-pointer image-pixel object-contain"
-                                onclick="loadhtml('skills')" />
+                                onclick="loadhtml('skills')"
+                            />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                            >
                                 SKILLS
                             </p>
                         </div>
 
-                        <div
-                            class="icon_group"
-                            data-page="about_me"
-                            >
+                        <div class="icon_group" data-page="about_me">
                             <img
                                 src="/assets/icons/text_file.png  "
                                 alt="about_me"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain" 
-                                onclick="loadhtml('about_me')"/>
-                                
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                onclick="loadhtml('about_me')"
+                            />
+
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                            >
                                 ABOUT ME
                             </p>
                         </div>
-                        <div
-                            class="icon_group"
-                            data-page="projects"
-                            data-title="PROJECTS">
+                        <div class="icon_group" data-page="projects" data-title="PROJECTS">
                             <img
                                 src="/assets/icons/projects.png"
                                 alt="project"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain" 
-                                onclick="loadhtml('projects')"/>
+                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                onclick="loadhtml('projects')"
+                            />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                            >
                                 PROJECTS
                             </p>
                         </div>
 
-                        <div
-                            class="icon_group"
-                            data-page="contact_me"
-                            data-title="CONTACT ME">
+                        <div class="icon_group" data-page="contact_me" data-title="CONTACT ME">
                             <img
                                 src="/assets/icons/contact_me.png"
                                 alt="contact_me"
                                 class="w-[50px] peer cursor-pointer image-pixel object-contain"
-                                onclick="loadhtml('contact_me')" />
+                                onclick="loadhtml('contact_me')"
+                            />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md">
+                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                            >
                                 CONTACT ME
                             </p>
                         </div>
