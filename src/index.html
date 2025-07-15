@@ -11,6 +11,13 @@
         <title>Amara's Portfolio</title>
     </head>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        loadhtml("projects");
+    });
+
+    </script>
+      
     <body class="font-blockBlueprint bg-retroShellPink min-w-full min-h-screen">
         <!-- begin screen  -->
         <!-- main-frame -->
@@ -49,70 +56,80 @@
                     >
                         <!-- Pane filler -->
                         <div
-                            class="pane-filler bg-lavenderBlush absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"
+                            class="pane-filler bg-lightBrown absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"
                         ></div>
-                        ˚
+                        
 
                         <!-- Welcome Screen -->
-                        <div id="welcome-screen" class="window z-10 w-[500px] h-[200px]">
+                        <div id="welcome-screen" class="window hidden z-10 w-[500px] h-[200px]">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3">WELCOME TO MY PORTFOLIO</div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" id="close-window">✕</button>
+                                    <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body">
                                 <p>Hello there! My name is Amara and</p>
                             </div>
                         </div>
+                        
+                        <!-- BEGIN WINDOW DIVS -->
 
-                        <div class="window z-10 w-[700px] h-[300px]" data-page="skills">
+                        <!-- SKILLS PAGE -->
+                        <div class="window hidden w-[900px] h-[500px]" data-page="skills">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" id="close-window">✕</button>
+                                    <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
                         </div>
 
-                        <div class="window z-10" data-page="about_me">
+                        <!-- ABOUT ME PAGE -->
+                        <div class="window hidden" data-page="about_me">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" id="close-window">✕</button>
+                                    <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
                         </div>
-                        <div class="window z-10" data-page="projects">
+
+                        <!-- PROJECTS PAGE -->
+                        <div class="window hidden w-[900px] h-[500px]" data-page="projects">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" id="close-window">✕</button>
+                                    <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
-                            <div class="window-body"></div>
+                            <div class="window-body h-[467px]"></div>
                         </div>
-                        <div class="window z-10" data-page="contact_me">
+
+                        <!-- CONTACT ME PAGE -->
+                        <div class="window hidden" data-page="contact_me">
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Minimize">_</button>
                                     <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" id="close-window">✕</button>
+                                    <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
                         </div>
+
+
                     </div>
 
                     <!-- right-pane -->

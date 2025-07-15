@@ -21,14 +21,20 @@ interact(".window").draggable({
 
 // screen closing
 
-document.getElementById("close-window").addEventListener("click", function () {
-    console.log("Close Window Button Clicked");
+document.querySelectorAll(".close-window").forEach(btn => {
+    btn.addEventListener("click", function (e) {
+        console.log("Close Window Button Clicked"); 
 
-    // get div name
-    var w = document.querySelector("div.window");
-    console.log(w);
+        // parent window 
+        const windowDiv = e.target.closest(".window"); 
 
-    w.style.display = "none";
+        if (windowDiv) {
+            windowDiv.classList.add("hidden"); 
+            console.log("closed:", windowDiv.dataset.page);
+        } else {
+            console.warn("No parent window found"); 
+        }
+    });
 });
 
 // fetching html for each page
@@ -46,7 +52,7 @@ async function loadhtml(name) {
         return;
     }
     // Show the window
-    container.style.display = "block";
+    container.classList.remove("hidden"); 
 
     // Bring to front
     container.style.zIndex = ++zIndexCounter;

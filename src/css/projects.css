@@ -1,0 +1,15 @@
+
+
+.tab-container input[type="radio"] {
+    display: none; 
+}
+
+.tab-container label {
+    padding: 25px;
+}
+
+.tab-container tab {
+    width: 100%;
+    padding: 20px;
+    background-color: antiquewhite;
+}

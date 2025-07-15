@@ -56,6 +56,8 @@ module.exports = {
             almondCream: "#FDF5F3",
             fogLilac: "#EDE6F2",
             petalFog: "#F4E8F2",
+
+            lightBrown: "#f0e6dc",
         },
 
         fontFamily: {
