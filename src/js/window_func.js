@@ -57,6 +57,7 @@ async function loadhtml(name) {
     // Bring to front
     container.style.zIndex = ++zIndexCounter;
 
+
     // Optional: update title bar
     title.textContent = name.replace("_", " ").toUpperCase();
 
@@ -73,5 +74,6 @@ async function loadhtml(name) {
     // Make this window come to front on click
     container.addEventListener("mousedown", () => {
         container.style.zIndex = ++zIndexCounter;
+        console.log(zIndexCounter); 
     });
 }

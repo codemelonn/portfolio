@@ -4,37 +4,47 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Projects</title>
-        <link rel="stylesheet" href="/src/css/projects.css">
+        <link rel="stylesheet" href="/src/css/projects.css" />
     </head>
     <body>
-        <div class="screen-container max-w-[900px] max-h-[500px]">
-
-
-            <div class="tab-container flex flex-wrap max-w-[900px]">
-
+        <div class="screen-container max-w-[100%] max-h-[100%]">
+            <div class="tab-container flex flex-wrap max-w-[100%]">
+                <!-- PORTFOLIO PROJECT -->
                 <input type="radio" id="tab-1" name="tabs" checked="checked" />
-                <label for="tab-1">PROJECT ONE</label>
-                <div class="tab">
-                    <h2>PROJECT TITLE</h2>
+                <label for="tab-1" class="rounded-t-xl px-6 mr-1 shadow-md">PORTFOLIO</label>
+                <div class="tab flex flex-col">
+                    <h2 class="flex mt-10 ml-6 text-2xl">MY PORTFOLIO</h2>
                     <p>here is the content of the first project tab</p>
                 </div>
 
-                <input type="radio" id="tab-2" name="tabs" checked="checked" />
-                <label for="tab-2">PROJECT TWO</label>
+                <!-- PEARL PROJECT -->
+                <input type="radio" id="tab-2" name="tabs" />
+                <label for="tab-2" class="rounded-t-xl px-6 mr-1 ml-1 shadow-md">
+                    PEARL (LIVE HOSTED GAME)
+                </label>
                 <div class="tab">
                     <h2>PROJECT TITLE</h2>
                     <p>here is the content of the second project tab</p>
                 </div>
 
-                <input type="radio" id="tab-3" name="tabs" checked="checked" />
-                <label for="tab-1">PROJECT THREE</label>
+                <!-- CASSANDRA DB PROJECT -->
+                <input type="radio" id="tab-3" name="tabs" />
+                <label for="tab-3" class="rounded-t-xl px-6 mr-1 ml-1 shadow-md">
+                    CASSANDRA DB
+                </label>
                 <div class="tab">
                     <h2>PROJECT TITLE</h2>
                     <p>here is the content of the third project tab</p>
                 </div>
+
+                <!-- POMODORO PROJECT -->
+                <input type="radio" id="tab-4" name="tabs" />
+                <label for="tab-4" class="rounded-t-xl px-6 mr-1 ml-1 shadow-md">POMODORO</label>
+                <div class="tab">
+                    <h2>POMODORO TIMER</h2>
+                    <p>here is the content of the fourth project tab</p>
+                </div>
             </div>
-
-
         </div>
     </body>
 </html>
