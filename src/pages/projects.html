@@ -6,15 +6,32 @@
         <title>Projects</title>
         <link rel="stylesheet" href="/src/css/projects.css" />
     </head>
-    <body>
-        <div class="screen-container max-w-[100%] max-h-[100%]">
+    <body class="h-screen">
+        <div class="screen-container h-full flex flex-col">
             <div class="tab-container flex flex-wrap max-w-[100%]">
                 <!-- PORTFOLIO PROJECT -->
                 <input type="radio" id="tab-1" name="tabs" checked="checked" />
                 <label for="tab-1" class="rounded-t-xl px-6 mr-1 shadow-md">PORTFOLIO</label>
-                <div class="tab flex flex-col">
-                    <h2 class="flex mt-10 ml-6 text-2xl">MY PORTFOLIO</h2>
-                    <p>here is the content of the first project tab</p>
+
+                <!-- TAB CONTENT -->
+                <div class="tab flex-grow overflow-auto">
+                    <div class="flex flex-col p-1 mt-10 m-6 border">
+                        <div class="self-start border p-3">
+                            <h2 class="text-2xl">MY PORTFOLIO</h2>
+                            <p><em>Always In Progress</em></p>
+                        </div>
+                        <div>
+                            <p class="border p-3 text-lg">
+                                This project was completed from scratch to demonstrate my knowledge
+                                in HTML, CSS, and Javascript. This project is a showcase of the
+                                passion I have for learning new skills and putting them to the test.
+                                I not only wanted this project to showcase my talents, but also to
+                                highlight my own personality. I have always had a fondness for retro
+                                computer styling conventions, and chose to put a piece of me in my
+                                portfolio!
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- PEARL PROJECT -->
@@ -39,9 +56,9 @@
 
                 <!-- POMODORO PROJECT -->
                 <input type="radio" id="tab-4" name="tabs" />
-                <label for="tab-4" class="rounded-t-xl px-6 mr-1 ml-1 shadow-md">POMODORO</label>
+                <label for="tab-4" class="rounded-t-xl px-6 mr-1 ml-1 shadow-md">COMPILER</label>
                 <div class="tab">
-                    <h2>POMODORO TIMER</h2>
+                    <h2>PERSONAL COMPILER</h2>
                     <p>here is the content of the fourth project tab</p>
                 </div>
             </div>

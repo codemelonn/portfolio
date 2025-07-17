@@ -1,13 +1,5 @@
-
-
 .tab-container input[type="radio"] {
-    display: none; 
-}
-
-.tab-container tab {
-    width: 100%;
-    padding: 2px;
-    background-color: antiquewhite;
+    display: none;
 }
 
 .tab-container label {
@@ -15,9 +7,9 @@
 }
 
 .tab-container .tab {
-    width: 100%; 
+    width: 100%;
     background-color: white;
-    order: 1;  
+    order: 1;
     display: none;
 }
 
