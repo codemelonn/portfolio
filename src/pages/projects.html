@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Projects</title>
         <link rel="stylesheet" href="/src/css/projects.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
     </head>
     <body class="h-screen">
         <div class="screen-container h-full flex flex-col">
@@ -14,21 +19,43 @@
                 <label for="tab-1" class="rounded-t-xl px-6 mr-1 shadow-md">PORTFOLIO</label>
 
                 <!-- TAB CONTENT -->
-                <div class="tab flex-grow overflow-auto">
-                    <div class="flex flex-col p-1 mt-10 m-6 border">
-                        <div class="self-start border p-3">
-                            <h2 class="text-2xl">MY PORTFOLIO</h2>
+                <div class="tab h-[430px] overflow-y-auto rounded-b-lg rounded-tr-lg">
+                    <div
+                        class="grid grid-cols-[2fr_2fr_2fr_min-content] grid-rows-6 gap-4 p-5 mt-5 m-6 rounded-lg border-2 border-cambridgeBlue"
+                    >
+                        <!-- Header -->
+                        <div class="col-span-1 row-span-2 border">
+                            <h2 class="text-2xl">Personal Portfolio Website</h2>
                             <p><em>Always In Progress</em></p>
                         </div>
-                        <div>
-                            <p class="border p-3 text-lg">
-                                This project was completed from scratch to demonstrate my knowledge
-                                in HTML, CSS, and Javascript. This project is a showcase of the
-                                passion I have for learning new skills and putting them to the test.
-                                I not only wanted this project to showcase my talents, but also to
-                                highlight my own personality. I have always had a fondness for retro
-                                computer styling conventions, and chose to put a piece of me in my
-                                portfolio!
+
+                        <!-- Github Link to Project -->
+                        <div class="col-span-2 col-start-2 border">GITHUB LINK</div>
+
+                        <!-- Tech Stack -->
+                        <div class="row-span-6 col-start-5 border w-min">
+                            <div class="flex flex-col items-center gap-4 pt-5">
+                                <i class="devicon-html5-plain-wordmark colored text-5xl"></i>
+                                <i class="devicon-css3-plain-wordmark colored text-5xl"></i>
+                                <i class="devicon-tailwindcss-original colored text-5xl"></i>
+                                <i class="devicon-javascript-plain colored text-5xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image Preview of Project -->
+                        <div class="col-span-1 row-span-4 col-start-1 row-start-3 border">
+                            PREVIEW IMAGE
+                        </div>
+
+                        <!-- Main Description Content -->
+                        <div class="col-span-2 row-span-5 col-start-2 row-start-2 border">
+                            <p class="text-lg text-balance">
+                                This site was built from scratch to serve as both a showcase of my
+                                technical skills and a reflection of my personality. I designed it
+                                with a retro computer aesthetic to highlight my creative approach
+                                and attention to detail. The project demonstrates my proficiency in
+                                frontend development, my enthusiasm for continuous learning, and my
+                                ability to bring a unique visual concept to life.
                             </p>
                         </div>
                     </div>
