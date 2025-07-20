@@ -17,7 +17,7 @@
         });
     </script>
 
-    <body class="font-MicrosoftOG bg-retroShellPink min-w-full min-h-screen">
+    <body class="font-MicrosoftOG text-cocoaText min-w-full min-h-screen">
         <!-- begin screen  -->
         <!-- main-frame -->
         <div class="main-frame fixed rounded-lg z-0 w-screen h-screen">
@@ -26,12 +26,14 @@
                 <!-- begin top-bar-container -->
                 <!-- emulates the top part of a desktop -->
                 <div
-                    class="top-bar-container fixed bg-[#e7e7e7] drop-shadow-lg z-1 w-full h-9 rounded-t-lg"
+                    class="top-bar-container fixed bg-bubblegumPink drop-shadow-lg z-1 w-full h-9 rounded-t-lg"
                 >
                     <!-- top bar elements here  -->
                     <div class="top-bar h-9 flex flex-row text-xl">
                         <!-- left-side-top-bar -->
-                        <div class="left-side-top-bar w-[86%] flex space-x-14 items-center">
+                        <div
+                            class="left-side-top-bar w-[86%] flex space-x-14 items-center text-2xl font-byteBounce"
+                        >
                             <p class="pl-3">AMARA OS</p>
                             <p>ABOUT</p>
                             <p>LINKS</p>
@@ -39,23 +41,21 @@
 
                         <!-- right-side-top-bar -->
                         <div class="right-side-top-bar w-[14%] flex justify-center items-center">
-                            <p id="current-time" class=""></p>
+                            <p id="current-time" class="font-byteBounce"></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- begin desktop-container -->
                 <!-- environment to emulate the desktop screen -->
-                <div
-                    class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-palePebble"
-                >
+                <div class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-blushMilk">
                     <!-- left-pane -->
                     <div
                         class="left-pane w-[86%] flex flex-row justify-center text-center pt-[15%]"
                     >
                         <!-- Pane filler -->
                         <div
-                            class="pane-filler bg-lightBrown absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"
+                            class="pane-filler bg-coffeeBrown absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"
                         ></div>
 
                         <!-- Welcome Screen -->
@@ -132,65 +132,102 @@
                     </div>
 
                     <!-- right-pane -->
-                    <div
-                        class="right-pane w-[14%] flex flex-col justify-start text-center items-center pt-10"
-                    >
+                    <div class="right-pane w-[14%] flex flex-col justify-start items-center pt-10">
                         <!-- begin icon tabs -->
                         <!-- clickable folders that open windows -->
 
-                        <div class="icon_group" data-page="skills">
+                        <!-- SKILLS ICON -->
+                        <div
+                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
+                            data-page="skills"
+                            style="width: 80px; height: 80px"
+                        >
+                            <div
+                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
+                            ></div>
+
                             <img
                                 src="/assets/icons/computer.png"
                                 alt="flop_drive"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('skills')"
                             />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                style="line-height: 1"
                             >
-                                SKILLS
+                                Skills
                             </p>
                         </div>
 
-                        <div class="icon_group" data-page="about_me">
+                        <!-- ABOUT ME ICON -->
+                        <div
+                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
+                            data-page="about_me"
+                            style="width: 80px; height: 80px"
+                        >
+                            <div
+                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
+                            ></div>
                             <img
-                                src="/assets/icons/text_file.png  "
+                                src="/assets/icons/text_file.png"
                                 alt="about_me"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('about_me')"
                             />
-
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                style="line-height: 1"
                             >
-                                ABOUT ME
+                                About Me
                             </p>
                         </div>
-                        <div class="icon_group" data-page="projects" data-title="PROJECTS">
+
+                        <!-- PROJECTS ICON -->
+                        <div
+                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
+                            data-page="projects"
+                            data-title="PROJECTS"
+                            style="width: 80px; height: 80px"
+                        >
+                            <div
+                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
+                            ></div>
                             <img
                                 src="/assets/icons/projects.png"
                                 alt="project"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('projects')"
                             />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                style="line-height: 1"
                             >
-                                PROJECTS
+                                Projects
                             </p>
                         </div>
 
-                        <div class="icon_group" data-page="contact_me" data-title="CONTACT ME">
+                        <!-- CONTACT ME ICON -->
+                        <div
+                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
+                            data-page="contact_me"
+                            data-title="CONTACT ME"
+                            style="width: 80px; height: 80px"
+                        >
+                            <div
+                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
+                            ></div>
                             <img
                                 src="/assets/icons/contact_me.png"
                                 alt="contact_me"
-                                class="w-[50px] peer cursor-pointer image-pixel object-contain"
+                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('contact_me')"
                             />
                             <p
-                                class="mb-[50px] mt-[3px] text-[14px] peer-hover:text-digitalGrape peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                style="line-height: 1"
                             >
-                                CONTACT ME
+                                Contact Me
                             </p>
                         </div>
                     </div>

@@ -1,24 +1,19 @@
-
 /* window.css is a styling page I will reuse to style my retro windows*/
 
-
 .window {
-    background-color: var(--blush-milk);
+    background-color: var(--vanilla-cream);
     padding: 2px;
-    box-shadow:
-      1px 1px 0 var(--dark-edge),        /* bottom-right outer */
-      -1px -1px 0 var(--light-edge),     /* top-left outer */
-      2px 2px 0 var(--smoky-quartz),     /* stronger depth */
-      -2px -2px 0 var(--light-edge),     /* soft lift */
-      inset 1px 1px 0 var(--dark-edge),  /* inner shadow */
-      inset -1px -1px 0 var(--light-edge); /* inner highlight */
+    box-shadow: 1px 1px 0 var(--dark-edge), /* bottom-right outer */ -1px -1px 0 var(--light-edge),
+        /* top-left outer */ 2px 2px 0 var(--smoky-quartz),
+        /* stronger depth */ -2px -2px 0 var(--light-edge),
+        /* soft lift */ inset 1px 1px 0 var(--dark-edge),
+        /* inner shadow */ inset -1px -1px 0 var(--light-edge); /* inner highlight */
     border: 1px solid var(--fog-lilac);
 }
-   
-  
+
 .title-bar {
-    background: linear-gradient(to right, var(--petal-mauve), var(--petal-mauve));
-    color: white;
+    background: linear-gradient(to right, var(--melon-rind), var(--melon-rind));
+    color: var(--cocoa-text);
     cursor: move;
     font-weight: bold;
     font-family: "Block Blueprint", sans-serif;
@@ -27,11 +22,9 @@
     justify-content: space-between;
     height: 28px;
     padding: 4px 8px;
-    box-shadow: 
-        inset -1px -1px #ffffff, 
-        inset 1px 1px var(--blush-milk);
+    box-shadow: inset -1px -1px var(--milk-tea-brown), inset 1px 1px var(--coffee-brown);
 }
-  
+
 .title-bar-controls button {
     border: 2px outset var(--almond-cream);
     background: var(--apricot-cream);
@@ -41,12 +34,10 @@
     padding: 0 6px;
     box-shadow: 0.5px 0.5px var(--fog-lilac);
 }
-  
+
 .window-body {
     padding: 10px;
     background-color: var(--almond-cream);
     color: var(--soft-ink);
-    box-shadow:
-    inset -1px -1px #fff,
-    inset 1px 1px var(--fog-lilac);
+    box-shadow: inset -1px -1px #fff, inset 1px 1px var(--fog-lilac);
 }

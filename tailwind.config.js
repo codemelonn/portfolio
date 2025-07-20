@@ -71,6 +71,16 @@ module.exports = {
             bone: "#e6d7c4", 
             roseBlush: "#d8a48f", 
             peachBlush: "#bb8487", 
+
+
+            blushPink: '#f2b6c6',
+            bubblegumPink: '#fca3b7',
+            coffeeBrown: '#5e4034',
+            milkTeaBrown: '#a77966',
+            vanillaCream: '#fff4ec',
+            mintDust: '#cbe3c0',
+            cocoaText: '#4a2e2a',
+            inkBlack: '#2f1e1e',
         },
 
         fontFamily: {
