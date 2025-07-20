@@ -40,6 +40,18 @@
     font-weight: normal; 
     font-style: normal;
 }
+@font-face {
+    font-family: "Microsoft OG"; 
+    src: url("/assets/fonts/w95fa.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "VCR"; 
+    src: url("/assets/fonts/VCR.woff2") format("woff2"); 
+    font-weight: normal; 
+    font-style: normal;
+}
 
 @import './window.css'; 
 @tailwind base;
@@ -76,7 +88,6 @@
     --cambridge-blue: #8fbc93;
     --pistachio-green: #c5dba9;
     --citron: #c5cc82;
-    --moss-green: #97a13b;
 
     /* Extras from image text */
     --amaranth-pink: #e0a3bb;
@@ -118,6 +129,20 @@
     --light-edge: #fef1f3;  
     --dark-edge: #a78b9f; 
     --light-brown: #f0e6dc;    
+
+    /* brown and pink pallet */ 
+    --sweet-tarts: #d3c98b; 
+    --nutty-brown: #a66c44; 
+    --dutch-tulips: #f5b6a7; 
+    --melon-rind: #a7a155; 
+    --sailboat-marina: #f2ead5;
+    --cafe-noir: #4b3d1a; 
+    --kombu-green: #364025; 
+    --moss-green: #899064;
+    --tan: #cfbb9a; 
+    --bone: #e6d7c4; 
+    --rose-blush: #d8a48f; 
+    --peach-blush: #bb8487; 
 
 
 

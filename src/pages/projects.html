@@ -20,43 +20,86 @@
 
                 <!-- TAB CONTENT -->
                 <div class="tab h-[430px] overflow-y-auto rounded-b-lg rounded-tr-lg">
+                    <!-- 5x7 grid-->
                     <div
-                        class="grid grid-cols-[2fr_2fr_2fr_min-content] grid-rows-6 gap-4 p-5 mt-5 m-6 rounded-lg border-2 border-cambridgeBlue"
+                        class="grid grid-cols-[3fr_2fr_2fr_2fr_min-content] grid-rows-[1fr_1fr_1fr_1fr_1fr_1fr_auto] gap-4 p-5 mt-5 m-6 rounded-lg border-2 border-cambridgeBlue"
                     >
                         <!-- Header -->
-                        <div class="col-span-1 row-span-2 border">
-                            <h2 class="text-2xl">Personal Portfolio Website</h2>
-                            <p><em>Always In Progress</em></p>
-                        </div>
-
-                        <!-- Github Link to Project -->
-                        <div class="col-span-2 col-start-2 border">GITHUB LINK</div>
-
-                        <!-- Tech Stack -->
-                        <div class="row-span-6 col-start-5 border w-min">
-                            <div class="flex flex-col items-center gap-4 pt-5">
-                                <i class="devicon-html5-plain-wordmark colored text-5xl"></i>
-                                <i class="devicon-css3-plain-wordmark colored text-5xl"></i>
-                                <i class="devicon-tailwindcss-original colored text-5xl"></i>
-                                <i class="devicon-javascript-plain colored text-5xl"></i>
-                            </div>
+                        <div class="col-span-1 row-span-2 border-double border-4">
+                            <h2 class="text-2xl font-blockBlueprint border-b">
+                                Personal Portfolio Website
+                            </h2>
+                            <p class="text-sm"><em>Always In Progress</em></p>
                         </div>
 
                         <!-- Image Preview of Project -->
-                        <div class="col-span-1 row-span-4 col-start-1 row-start-3 border">
-                            PREVIEW IMAGE
+                        <div
+                            class="col-span-1 row-span-4 col-start-1 row-start-3 border-double border-4"
+                        >
+                            <h2 class="border-b font-blockBlueprint text-xl">PREVIEW</h2>
+                        </div>
+
+                        <!-- Project Role -->
+                        <div
+                            class="col-span-1 row-auto col-start-1 row-start-7 border-double border-4 overflow-hidden"
+                        >
+                            <h2 class="border-b font-blockBlueprint text-xl">PROJECT ROLE</h2>
+                            <div class="text-left p-4">
+                                <p>- Sole Developer</p>
+                                <p>- Frontend Engineer</p>
+                                <p>- UI/UX Designer</p>
+                                <p>- Creative Direction</p>
+                            </div>
+                        </div>
+
+                        <!-- Github Link to Project -->
+                        <div
+                            class="col-span-3 col-start-2 border font-blockBlueprint border-double border-4 text-xl"
+                        >
+                            GITHUB LINK
                         </div>
 
                         <!-- Main Description Content -->
-                        <div class="col-span-2 row-span-5 col-start-2 row-start-2 border">
-                            <p class="text-lg text-balance">
-                                This site was built from scratch to serve as both a showcase of my
-                                technical skills and a reflection of my personality. I designed it
-                                with a retro computer aesthetic to highlight my creative approach
-                                and attention to detail. The project demonstrates my proficiency in
-                                frontend development, my enthusiasm for continuous learning, and my
-                                ability to bring a unique visual concept to life.
-                            </p>
+                        <div
+                            class="col-span-3 row-span-5 col-start-2 row-start-2 border-double border-4"
+                        >
+                            <div class="text-lg text-left p-4">
+                                <p>
+                                    This site was built from scratch to serve as both a showcase of
+                                    my technical skills and a reflection of my personality. I
+                                    designed it with a retro computer aesthetic to highlight my
+                                    creative approach and attention to detail. The project
+                                    demonstrates my proficiency in frontend development, my
+                                    enthusiasm for continuous learning, and my ability to bring a
+                                    unique visual concept to life.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Features -->
+                        <div
+                            class="col-span-4 row-auto col-start-2 row-start-7 border-double border-4"
+                        >
+                            <h2 class="border-b font-blockBlueprint text-xl">FEATURES</h2>
+                            <div class="text-left p-4">
+                                <p>
+                                    - Fully responsive, custom layout using various CSS properties
+                                </p>
+                                <p>- Retro themed draggable window systems using interactjs</p>
+                                <p>- Modular tabbed navigation</p>
+                                <p>- Dynamic HTML content loading via JavaScript</p>
+                                <p>- Designed entirely without pre-built templates or frameworks</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="row-span-6 col-start-5 w-min self-end">
+                            <div class="flex flex-col gap-4 items-center pb-3">
+                                <i class="devicon-html5-plain-wordmark colored text-5xl"></i>
+                                <i class="devicon-css3-plain-wordmark colored text-5xl"></i>
+                                <i class="devicon-tailwindcss-original colored text-4xl"></i>
+                                <i class="devicon-javascript-plain colored text-4xl"></i>
+                            </div>
                         </div>
                     </div>
                 </div>

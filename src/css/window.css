@@ -21,6 +21,7 @@
     color: white;
     cursor: move;
     font-weight: bold;
+    font-family: "Block Blueprint", sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;

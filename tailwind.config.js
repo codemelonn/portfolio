@@ -58,6 +58,19 @@ module.exports = {
             petalFog: "#F4E8F2",
 
             lightBrown: "#f0e6dc",
+
+            sweetTarts: "#d3c98b", 
+            nuttyBrown: "#a66c44", 
+            dutchTulips: "#f5b6a7", 
+            melonRind: "#a7a155", 
+            sailboatMarina: "#f2ead5",
+            cafeNoir: "#4b3d1a", 
+            kombuGreen: "#364025", 
+            mossGreen: "#899064",
+            tan: "#cfbb9a", 
+            bone: "#e6d7c4", 
+            roseBlush: "#d8a48f", 
+            peachBlush: "#bb8487", 
         },
 
         fontFamily: {
@@ -68,7 +81,8 @@ module.exports = {
             computerPixel: ['"Computer Pixel"', "sans-serif"], 
             ffPath: ['"FF Path"', "sans-serif"], 
             blockBlueprint: ['"Block Blueprint"', "sans-serif"], 
-            
+            MicrosoftOG: ['"Microsoft OG"', "sans-serif"], 
+            VCR: ['"VCR"', "sans-serif"], 
         },
 
         extend: {},
