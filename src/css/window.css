@@ -1,43 +1,54 @@
-/* window.css is a styling page I will reuse to style my retro windows*/
+/* This is the file I will be repeatedly calling to throughout the styling of my portfolio */ 
+
 
 .window {
-    background-color: var(--vanilla-cream);
+    background-color: #d6c3b0; /* your light tan background */
     padding: 2px;
-    box-shadow: 1px 1px 0 var(--dark-edge), /* bottom-right outer */ -1px -1px 0 var(--light-edge),
-        /* top-left outer */ 2px 2px 0 var(--smoky-quartz),
-        /* stronger depth */ -2px -2px 0 var(--light-edge),
-        /* soft lift */ inset 1px 1px 0 var(--dark-edge),
-        /* inner shadow */ inset -1px -1px 0 var(--light-edge); /* inner highlight */
-    border: 1px solid var(--fog-lilac);
+    border: 2px solid var(--coffee-brown); /* dark border */
+    box-shadow:
+        inset -1px -1px #f3ebe2,   /* light bevel */
+        inset 1px 1px #a58d7f;     /* inner shadow */
+    color: #3d2f28;
 }
 
+/* TITLE BAR */
 .title-bar {
-    background: linear-gradient(to right, var(--melon-rind), var(--melon-rind));
-    color: var(--cocoa-text);
-    cursor: move;
-    font-weight: bold;
-    font-family: "Block Blueprint", sans-serif;
+    background: linear-gradient(to right, #5e473d, #7c6052);
+    color: #ede5db;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 28px;
     padding: 4px 8px;
-    box-shadow: inset -1px -1px var(--milk-tea-brown), inset 1px 1px var(--coffee-brown);
+    height: 32px; 
+    text-shadow: 1px 1px var(--coffee-brown);
+    box-shadow:
+        inset -1px -1px #a58d7f,
+        inset 1px 1px #3d2f28;
 }
 
+/* CONTROL BUTTONS */
 .title-bar-controls button {
-    border: 2px outset var(--almond-cream);
-    background: var(--apricot-cream);
-    color: var(--dark-edge);
-    font-weight: bold;
-    font-family: monospace;
-    padding: 0 6px;
-    box-shadow: 0.5px 0.5px var(--fog-lilac);
+    background: #ede5db;
+    border: 2px outset #ffffff;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: 4px;
+    font-size: 10px;
+    line-height: 1;
+    color: #3d2f28;
+    box-shadow:
+        inset -1px -1px #ffffff,
+        inset 1px 1px var(--milk-tea-brown);
 }
 
+/* CONTENT BODY */
 .window-body {
-    padding: 10px;
-    background-color: var(--almond-cream);
-    color: var(--soft-ink);
-    box-shadow: inset -1px -1px #fff, inset 1px 1px var(--fog-lilac);
+    background-color: #f3ebe2;
+    padding: 8px;
+    border: 2px solid #5e473d;
+    box-shadow:
+        inset -1px -1px #ffffff,
+        inset 1px 1px #a58d7f;
+    color: #3d2f28;
 }

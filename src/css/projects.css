@@ -3,13 +3,13 @@
 }
 
 .tab-container label {
-    background-color: white;
+    background-color: var(--moss-green);
     font-family: "Block Blueprint", sans-serif;
 }
 
 .tab-container .tab {
     width: 100%;
-    background-color: white;
+    background-color: var(--vanilla-cream);
     order: 1;
     display: none;
 }
@@ -19,5 +19,6 @@
 }
 
 .tab-container input[type="radio"]:checked + label {
-    background: pink;
+    background: var(--kombu-green);
+    color: var(--vanilla-cream);
 }

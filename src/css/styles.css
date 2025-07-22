@@ -5,59 +5,58 @@
     font-style: normal;
 }
 @font-face {
-    font-family: "Orange Kid"; 
-    src: url("/assets/fonts/Orange\ Kid.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "Orange Kid";
+    src: url("/assets/fonts/Orange\ Kid.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "Retro Byte"; 
-    src: url("/assets/fonts/RetroByte.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "Retro Byte";
+    src: url("/assets/fonts/RetroByte.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "VP Pixel"; 
-    src: url("/assets/fonts/VPPixel-Simplified.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "VP Pixel";
+    src: url("/assets/fonts/VPPixel-Simplified.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "Computer Pixel"; 
-    src: url("/assets/fonts/computer_pixel-7.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "Computer Pixel";
+    src: url("/assets/fonts/computer_pixel-7.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "FF Path"; 
-    src: url("/assets/fonts/FFPathSpect-Regular.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "FF Path";
+    src: url("/assets/fonts/FFPathSpect-Regular.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "Block Blueprint"; 
-    src: url("/assets/fonts/Blockblueprint-LV7z5.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "Block Blueprint";
+    src: url("/assets/fonts/Blockblueprint-LV7z5.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "Microsoft OG"; 
-    src: url("/assets/fonts/w95fa.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "Microsoft OG";
+    src: url("/assets/fonts/w95fa.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "VCR"; 
-    src: url("/assets/fonts/VCR.woff2") format("woff2"); 
-    font-weight: normal; 
+    font-family: "VCR";
+    src: url("/assets/fonts/VCR.woff2") format("woff2");
+    font-weight: normal;
     font-style: normal;
 }
 
-@import './window.css'; 
+@import "./window.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 .pane-filler {
     box-shadow: 4px -4px 6px rgba(0, 0, 0, 0.09);
@@ -79,81 +78,57 @@
     --peach: #fcebbf;
     --butter-yellow: #ffe7ab;
 
-    /* Blues */
-    --columbia-blue: #c9b297;
-    --periwinkle-pale-blue: #9eccf0;
-    --azure: #d6e6e7;
-
     /* Greens */
     --cambridge-blue: #8fbc93;
     --pistachio-green: #c5dba9;
     --citron: #c5cc82;
 
-    /* Extras from image text */
-    --amaranth-pink: #e0a3bb;
-    --lavender-blush: #f4dfe6;
+    /* window colors */
+    --sweet-pink: #f1d1da;
+    --window-grey: #bebbb0;
+    --title-pink: #eeb1bf;
 
-    /* window colors */ 
-    --sweet-pink: #f1d1da; 
-    --window-grey: #bebbb0; 
-    --title-pink: #eeb1bf; 
+    /* more experimental colors*/
+    --retro-shell-pink: #f4d1d2;
+    --dusty-blush: #e8b4bc;
+    --apricot-cream: #fbe8de;
 
-    /* experimental colors*/
-    --header-grey: #9c9a97; 
-    --header-orange: #eea971; 
-    --body-tan: #c7afa8; 
-    --header-blue: #4f8fab; 
-    --mauve: #b9868d; 
-    --body-tan-2: #c8b1a8; 
-    --body-tan-3: #a99890; 
-    --ice-blue: #cdd7dd; 
-    --ice-blue-dark: #748191; 
+    --blush-milk: #f6d3d6;
+    --petal-mauve: #d7a3ab;
+    --almond-cream: #fdf5f3;
+    --fog-lilac: #ede6f2;
+    --petal-fog: #f4e8f2;
+    --light-edge: #fef1f3;
+    --dark-edge: #a78b9f;
+    --light-brown: #f0e6dc;
 
-    /* more experimental colors*/ 
-    --retro-shell-pink: #F4D1D2;
-    --dusty-blush: #E8B4BC;
-    --velvet-mauve: #B97C86;
-    --smoky-quartz: #6B5B63;
-    --pale-pebble: #F8F6F3;
-    --steel-rose: #9F8B94;
-    --powder-lilac: #D4C4DC;
-    --digital-grape: #7B6F96;
-    --soft-ink: #413D4D;
-    --apricot-cream: #FBE8DE;
-
-    --blush-milk: #F6D3D6;
-    --petal-mauve: #D7A3AB;
-    --almond-cream: #FDF5F3;
-    --fog-lilac: #EDE6F2;
-    --petal-fog: #F4E8F2;
-    --light-edge: #fef1f3;  
-    --dark-edge: #a78b9f; 
-    --light-brown: #f0e6dc;    
-
-    /* brown and pink pallet */ 
-    --sweet-tarts: #d3c98b; 
-    --nutty-brown: #a66c44; 
-    --dutch-tulips: #f5b6a7; 
-    --melon-rind: #a7a155; 
+    /* brown and pink pallet */
+    --sweet-tarts: #d3c98b;
+    --nutty-brown: #a66c44;
+    --dutch-tulips: #f5b6a7;
+    --melon-rind: #a7a155;
     --sailboat-marina: #f2ead5;
-    --cafe-noir: #4b3d1a; 
-    --kombu-green: #364025; 
+    --cafe-noir: #4b3d1a;
+    --kombu-green: #364025;
     --moss-green: #899064;
-    --tan: #cfbb9a; 
-    --bone: #e6d7c4; 
-    --rose-blush: #d8a48f; 
-    --peach-blush: #bb8487; 
+    --tan: #cfbb9a;
+    --bone: #e6d7c4;
+    --rose-blush: #d8a48f;
+    --peach-blush: #bb8487;
 
+    --blush-pink: #f9c6cc;
+    --bubblegum-pink: #fca3b7;
+    --coffee-brown: #5e4034;
+    --milk-tea-brown: #a77966;
+    --vanilla-cream: #fff4ec;
+    --mint-dust: #cbe3c0;
+    --cocoa-text: #4a2e2a;
+    --ink-black: #2f1e1e;
 
-    --blush-pink: "#f2b6c6";
-    --bubblegum-pink: "#fca3b7";
-    --coffee-brown: "#5e4034";
-    --milk-tea-brown: "#a77966";
-    --vanilla-cream: "#fff4ec";
-    --mint-dust: "#cbe3c0";
-    --cocoa-text: "#4a2e2a";
-    --ink-black: "#2f1e1e";
-
-
-
+    --shell-pink: #f7b2b7;
+    --cocoa-brown: #6e4b47;
+    --milk-brown: #a2756c;
+    --vanilla: #fff9f5;
+    --mint-glint: #d0eed6;
+    --ink: #38221a;
 }

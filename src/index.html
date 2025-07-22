@@ -26,13 +26,13 @@
                 <!-- begin top-bar-container -->
                 <!-- emulates the top part of a desktop -->
                 <div
-                    class="top-bar-container fixed bg-bubblegumPink drop-shadow-lg z-1 w-full h-9 rounded-t-lg"
+                    class="top-bar-container fixed bg-vanillaCream drop-shadow-lg z-1 w-full h-9 rounded-t-lg"
                 >
                     <!-- top bar elements here  -->
                     <div class="top-bar h-9 flex flex-row text-xl">
                         <!-- left-side-top-bar -->
                         <div
-                            class="left-side-top-bar w-[86%] flex space-x-14 items-center text-2xl font-byteBounce"
+                            class="left-side-top-bar w-[86%] flex space-x-14 items-center text-2xl font-blockBlueprint"
                         >
                             <p class="pl-3">AMARA OS</p>
                             <p>ABOUT</p>
@@ -55,7 +55,7 @@
                     >
                         <!-- Pane filler -->
                         <div
-                            class="pane-filler bg-coffeeBrown absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] z-0"
+                            class="pane-filler bg-milkTeaBrown absolute bottom-0 left-0 w-[85%] h-[90%] rounded-tr-[15px] rounded-br-[15px] z-0"
                         ></div>
 
                         <!-- Welcome Screen -->
@@ -106,15 +106,13 @@
                             class="window hidden w-[900px] h-[500px] fixed left-[200px] top-[100px]"
                             data-page="projects"
                         >
-                            <div class="title-bar">
+                            <div class="title-bar font-blockBlueprint text-2xl">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
-                                    <button aria-label="Minimize">_</button>
-                                    <button aria-label="Maximize">□</button>
                                     <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
-                            <div class="window-body h-[95%]"></div>
+                            <div class="window-body h-[93.76%]"></div>
                         </div>
 
                         <!-- CONTACT ME PAGE -->
@@ -131,7 +129,8 @@
                         </div>
                     </div>
 
-                    <!-- right-pane -->
+                    <!-- RIGHT PANE -->
+
                     <div class="right-pane w-[14%] flex flex-col justify-start items-center pt-10">
                         <!-- begin icon tabs -->
                         <!-- clickable folders that open windows -->
@@ -140,7 +139,14 @@
                         <div
                             class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
                             data-page="skills"
-                            style="width: 80px; height: 80px"
+                            style="
+                                width: 6.5vw;
+                                height: 6.5vw;
+                                min-width: 60px;
+                                min-height: 60px;
+                                max-width: 90px;
+                                max-height: 90px;
+                            "
                         >
                             <div
                                 class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
@@ -149,11 +155,11 @@
                             <img
                                 src="/assets/icons/computer.png"
                                 alt="flop_drive"
-                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
+                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('skills')"
                             />
                             <p
-                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
                                 style="line-height: 1"
                             >
                                 Skills
@@ -164,7 +170,14 @@
                         <div
                             class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
                             data-page="about_me"
-                            style="width: 80px; height: 80px"
+                            style="
+                                width: 6.5vw;
+                                height: 6.5vw;
+                                min-width: 60px;
+                                min-height: 60px;
+                                max-width: 90px;
+                                max-height: 90px;
+                            "
                         >
                             <div
                                 class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
@@ -172,11 +185,11 @@
                             <img
                                 src="/assets/icons/text_file.png"
                                 alt="about_me"
-                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
+                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('about_me')"
                             />
                             <p
-                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
                                 style="line-height: 1"
                             >
                                 About Me
@@ -188,7 +201,14 @@
                             class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
                             data-page="projects"
                             data-title="PROJECTS"
-                            style="width: 80px; height: 80px"
+                            style="
+                                width: 6.5vw;
+                                height: 6.5vw;
+                                min-width: 60px;
+                                min-height: 60px;
+                                max-width: 90px;
+                                max-height: 90px;
+                            "
                         >
                             <div
                                 class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
@@ -196,11 +216,11 @@
                             <img
                                 src="/assets/icons/projects.png"
                                 alt="project"
-                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
+                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('projects')"
                             />
                             <p
-                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
                                 style="line-height: 1"
                             >
                                 Projects
@@ -212,7 +232,14 @@
                             class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
                             data-page="contact_me"
                             data-title="CONTACT ME"
-                            style="width: 80px; height: 80px"
+                            style="
+                                width: 6.5vw;
+                                height: 6.5vw;
+                                min-width: 60px;
+                                min-height: 60px;
+                                max-width: 90px;
+                                max-height: 90px;
+                            "
                         >
                             <div
                                 class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
@@ -220,11 +247,11 @@
                             <img
                                 src="/assets/icons/contact_me.png"
                                 alt="contact_me"
-                                class="w-[45px] peer cursor-pointer image-pixel object-contain z-10 relative"
+                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
                                 onclick="loadhtml('contact_me')"
                             />
                             <p
-                                class="mt-[3px] text-[14px] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
+                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
                                 style="line-height: 1"
                             >
                                 Contact Me
