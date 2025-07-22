@@ -65,70 +65,53 @@
 :root {
     /* Soft Neutrals */
     --antique-white: #faebd7;
-    --alabaster: #eefef8;
-
-    /* Warm Pinks */
-    --puce: #cc8899;
-    --cherry-blossom-pink: #e9acbb;
-    --soft-pink: #f5c8c4;
-    --spring-coral: #f59c9a;
-    --peach-fuzz: #ffbe98;
-
-    /* Light Yellows */
-    --peach: #fcebbf;
-    --butter-yellow: #ffe7ab;
-
-    /* Greens */
-    --cambridge-blue: #8fbc93;
-    --pistachio-green: #c5dba9;
-    --citron: #c5cc82;
-
-    /* window colors */
-    --sweet-pink: #f1d1da;
-    --window-grey: #bebbb0;
-    --title-pink: #eeb1bf;
-
-    /* more experimental colors*/
-    --retro-shell-pink: #f4d1d2;
-    --dusty-blush: #e8b4bc;
-    --apricot-cream: #fbe8de;
-
-    --blush-milk: #f6d3d6;
-    --petal-mauve: #d7a3ab;
-    --almond-cream: #fdf5f3;
-    --fog-lilac: #ede6f2;
-    --petal-fog: #f4e8f2;
-    --light-edge: #fef1f3;
-    --dark-edge: #a78b9f;
-    --light-brown: #f0e6dc;
+    --light-brown: #e6cca2;
 
     /* brown and pink pallet */
-    --sweet-tarts: #d3c98b;
-    --nutty-brown: #a66c44;
+
+    /* PINKS / BLUSHES */
+    --whisper-pink: #fce9ec;
+    --blush-pink: #f9c6cc;
+    --bubblegum-pink: #f7afbf;
+    --shell-pink: #f7b2b7;
     --dutch-tulips: #f5b6a7;
-    --melon-rind: #a7a155;
-    --sailboat-marina: #f2ead5;
-    --cafe-noir: #4b3d1a;
-    --kombu-green: #364025;
-    --moss-green: #899064;
-    --tan: #cfbb9a;
-    --bone: #e6d7c4;
     --rose-blush: #d8a48f;
     --peach-blush: #bb8487;
+    --sweet-pink: #ffd3da; 
+    --sweeter-pink: #ffdbe0; 
 
-    --blush-pink: #f9c6cc;
-    --bubblegum-pink: #fca3b7;
-    --coffee-brown: #5e4034;
-    --milk-tea-brown: #a77966;
-    --vanilla-cream: #fff4ec;
-    --mint-dust: #cbe3c0;
-    --cocoa-text: #4a2e2a;
-    --ink-black: #2f1e1e;
-
-    --shell-pink: #f7b2b7;
-    --cocoa-brown: #6e4b47;
-    --milk-brown: #a2756c;
+    /* BROWNS / NEUTRALS */
     --vanilla: #fff9f5;
-    --mint-glint: #d0eed6;
+    --vanilla-cream: #fff4ec;
+    --sailboat-marina: #f2ead5;
+    --bone: #e6d7c4;
+    --tan: #cfbb9a;
+    --milk-tea-brown: #a77966;
+    --milk-brown: #a2756c;
+    --ashy-brown: #5e473d;
+    --coffee-brown: #5e4034;
+    --cocoa-brown: #6e4b47;
+    --cocoa-text: #4a2e2a;
     --ink: #38221a;
+    --ink-black: #2f1e1e;
+    --cafe-noir: #4b3d1a;
+
+    /* GREENS / EARTH TONES */
+    --mint-glint: #d0eed6;
+    --mint-dust: #cbe3c0;
+    --moss-green: #899064;
+    --melon-rind: #a7a155;
+    --kombu-green: #364025;
+
+    /* YELLOWS / WARM TONES */
+    --sweet-tarts: #d3c98b;
+    --nutty-brown: #a66c44;
+
+    --brown-titlebar-stripes: repeating-linear-gradient(
+        to bottom,
+        var(--coffee-brown) 0px,
+        var(--coffee-brown) 3.5px,
+        var(--cocoa-brown) 3.5px,
+        var(--cocoa-brown) 6px
+    );
 }
