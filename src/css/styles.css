@@ -77,8 +77,8 @@
     --dutch-tulips: #f5b6a7;
     --rose-blush: #d8a48f;
     --peach-blush: #bb8487;
-    --sweet-pink: #ffd3da; 
-    --sweeter-pink: #ffdbe0; 
+    --sweet-pink: #ffd3da;
+    --sweeter-pink: #ffdbe0;
 
     /* BROWNS / NEUTRALS */
     --vanilla: #fff9f5;
@@ -114,4 +114,18 @@
         var(--cocoa-brown) 3.5px,
         var(--cocoa-brown) 6px
     );
+
+    --background-gradient: radial-gradient(
+            circle at 20% 20%,
+            var(--whisper-pink) 2px,
+            transparent 2px
+        ),
+        radial-gradient(circle at 80% 80%, var(--blush-pink) 1px, transparent 1px),
+        linear-gradient(
+            45deg,
+            var(--sweet-pink) 0%,
+            var(--sweeter-pink) 50%,
+            var(--sweet-pink) 100%
+        );
+
 }

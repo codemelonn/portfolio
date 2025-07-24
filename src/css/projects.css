@@ -4,14 +4,28 @@
 
 .tab-container label {
     background-color: var(--moss-green);
+    color: var(--vanilla);
     font-family: "Block Blueprint", sans-serif;
+    border-top: 1px solid var(--mint-dust);
+    border-left: 1px solid var(--mint-dust);
+    border-right: 1px solid var(--kombu-green);
+    border-bottom: 1px solid var(--kombu-green);
+    cursor: pointer;
+    position: relative;
 }
 
 .tab-container .tab {
     width: 100%;
-    background-color: var(--vanilla-cream);
+    background: repeating-linear-gradient(
+        0deg,
+        var(--sweet-pink) 0px,
+        var(--sweet-pink) 2px,
+        var(--sweeter-pink) 2px,
+        var(--sweeter-pink) 4px
+    );
     order: 1;
     display: none;
+    box-shadow: inset 2px 2px 6px rgba(167, 121, 102, 0.3);
 }
 
 .tab-container input[type="radio"]:checked + label + .tab {
@@ -24,3 +38,77 @@
     text-shadow: 1px 1px 2px var(--melon-rind);
 }
 
+/* Main grid container - subtle inset */
+.tab .grid {
+    background-color: var(--vanilla-cream);
+    border-top: 3px dashed var(--sailboat-marina);
+    border-left: 3px dashed var(--sailboat-marina);
+    border-right: 3px dashed var(--bone);
+    border-bottom: 3px dashed var(--bone);
+}
+
+/* Individual grid cells - clean raised panels */
+.tab .grid > div {
+    background-color: var(--vanilla);
+    border-top: 1px solid var(--bubblegum-pink);
+    border-left: 1px solid var(--bubblegum-pink);
+    border-right: 1px solid var(--whisper-pink);
+    border-bottom: 1px solid var(--whisper-pink);
+    position: relative;
+}
+
+/* Title bars - chunkier blocky style */
+.tab .grid h2 {
+    background-color: var(--shell-pink);
+    color: var(--cafe-noir);
+    border-top: 3px solid var(--whisper-pink);
+    border-left: 3px solid var(--whisper-pink);
+    border-right: 3px solid var(--rose-blush);
+    border-bottom: 3px solid var(--rose-blush);
+    margin: 0;
+    font-family: "Block Blueprint", sans-serif;
+}
+
+/* GitHub link section - pink button style */
+.tab .grid > div:nth-child(4) {
+    background-color: var(--shell-pink);
+    color: var(--cocoa-text);
+    border-top: 4px solid var(--whisper-pink);
+    border-left: 4px solid var(--whisper-pink);
+    border-right: 4px solid var(--rose-blush);
+    border-bottom: 4px solid var(--rose-blush);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
+}
+
+/* GitHub Button hover */
+
+.tab .grid > div:nth-child(4):hover {
+    background-color: var(--melon-rind);
+    border-top: 4px solid var(--moss-green);
+    border-left: 4px solid var(--moss-green);
+    border-right: 4px solid var(--kombu-green);
+    border-bottom: 4px solid var(--kombu-green);
+}
+/* Github button active */ 
+.tab .grid > div:nth-child(4):active {
+    border-top: 1px solid var(--rose-blush);
+    border-left: 1px solid var(--rose-blush);
+    border-right: 1px solid var(--whisper-pink);
+    border-bottom: 1px solid var(--whisper-pink);
+    transform: translate(1px, 1px);
+}
+
+
+/* Clean, minimal shadows for depth */
+.tab .grid > div {
+    box-shadow: 0px 1px 4px rgba(94, 71, 61, 0.15);
+}
+
+/* Subtle focus states */
+.tab .grid > div:hover {
+    box-shadow: 0px 2px 4px rgba(94, 71, 61, 0.2);
+}

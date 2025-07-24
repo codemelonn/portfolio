@@ -13,7 +13,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            loadhtml("projects");
+            loadhtml("about_me");
         });
     </script>
 
@@ -89,16 +89,22 @@
                         </div>
 
                         <!-- ABOUT ME PAGE -->
-                        <div class="window hidden" data-page="about_me">
-                            <div class="title-bar">
+                        <div
+                            class="window hidden w-[700px] h-[400px] fixed left-[100px] top-[200px]"
+                            data-page="about_me"
+                        >
+                            <div class="title-bar font-blockBlueprint text-2xl">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
-                                    <button aria-label="Minimize">_</button>
-                                    <button aria-label="Maximize">□</button>
-                                    <button aria-label="Close" class="close-window">✕</button>
+                                    <button class="close-window">x</button>
                                 </div>
                             </div>
-                            <div class="window-body"></div>
+                            <div class="window-body h-[86.4%]"></div>
+                            <div class="window-footer">
+                                <div class="scroll-left">◀</div>
+                                <div class="scroll-bar"></div>
+                                <div class="scroll-right">▶</div>
+                            </div>
                         </div>
 
                         <!-- PROJECTS PAGE -->
@@ -106,7 +112,7 @@
                             class="window hidden w-[900px] h-[500px] fixed left-[200px] top-[100px]"
                             data-page="projects"
                         >
-                            <div class="title-bar font-blockBlueprint text-2xl ">
+                            <div class="title-bar font-blockBlueprint text-2xl">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
                                     <button class="close-window">x</button>
@@ -125,8 +131,6 @@
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
-                                    <button aria-label="Minimize">_</button>
-                                    <button aria-label="Maximize">□</button>
                                     <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
