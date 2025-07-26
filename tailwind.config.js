@@ -5,19 +5,20 @@ module.exports = {
         colors: {
             // BROWNS / NEUTRALS
             vanilla: "#fff9f5",
-            vanillaCream: "#fff4ec",
+            vanillaCream: "#fff3ec",
             sailboatMarina: "#f2ead5",
             bone: "#e6d7c4",
             tan: "#cfbb9a",
-            milkTeaBrown: "#a77966",
+            milkTeaBrown: "#a58d7f",
             milkBrown: "#a2756c",
             ashyBrown: "#5e473d",
             coffeeBrown: "#5e4034",
             cocoaBrown: "#6e4b47",
-            cocoaText: "#4a2e2a",
+            cocoaText: "#5c4238",
             ink: "#38221a",
             inkBlack: "#2f1e1e",
             cafeNoir: "#4b3d1a",
+            blushMilk: '#fae7e7',
 
             // GREENS / EARTH TONES
             mintGlint: "#d0eed6",
