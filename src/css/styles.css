@@ -52,6 +52,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Adobe Dia";
+    src: url("/assets/fonts/Adobe\ Dia.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
 
 @import "./window.css";
 @tailwind base;
@@ -111,10 +117,10 @@
 
     --brown-titlebar-stripes: repeating-linear-gradient(
         to bottom,
-        var(--coffee-brown) 0px,
-        var(--coffee-brown) 3.5px,
-        var(--cocoa-brown) 3.5px,
-        var(--cocoa-brown) 6px
+        var(--melon-rind) 0px,
+        var(--melon-rind) 3.5px,
+        var(--mint-dust) 3.5px,
+        var(--mint-dust) 6px
     );
 
     --background-gradient: radial-gradient(
