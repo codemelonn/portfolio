@@ -6,6 +6,13 @@ const position = { x: 100, y: 100 };
 interact(".window").draggable({
     // only start dragging when pointer is down on the title bar
     allowFrom: ".title-bar",
+    modifiers: [
+        interact.modifiers.restrictRect({
+            restriction: document.querySelector(".left-pane"), // limit to desktop container
+            endOnly: false, // live restriction
+            elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+        }),
+    ],
     listeners: {
         move(event) {
             const target = event.target;
@@ -19,30 +26,39 @@ interact(".window").draggable({
     },
 });
 
-// screen closing
+// screen closing || footer visibility
 
-document.querySelectorAll(".close-window").forEach(btn => {
+document.querySelectorAll(".close-window").forEach((btn) => {
+
     btn.addEventListener("click", function (e) {
-        console.log("Close Window Button Clicked"); 
 
-        // parent window 
-        const windowDiv = e.target.closest(".window"); 
+        // parent window || footer elements || name of page 
+        const windowDiv = e.target.closest(".window");
+        const footerElem = document.querySelectorAll(".footer-elem");
+        pageName = windowDiv.dataset.page.toUpperCase().replace("_", " ");
 
         if (windowDiv) {
-            windowDiv.classList.add("hidden"); 
-            console.log("closed:", windowDiv.dataset.page);
+            // hide window 
+            windowDiv.classList.add("hidden");
+
+            // hide footer 
+            footerElem.forEach((footerElem) => {
+                if (pageName == footerElem.textContent) {
+                    footerElem.classList.add("hidden");
+                }
+            });
+            
         } else {
-            console.warn("No parent window found"); 
+            console.warn("No parent window found");
         }
     });
 });
 
 // fetching html for each page
 
-let zIndexCounter = 100; 
+let zIndexCounter = 100;
 
 async function loadhtml(name) {
-
     const container = document.querySelector(`.window[data-page="${name}"]`);
     const body = container?.querySelector(".window-body");
     const title = container?.querySelector(".title-bar-text");
@@ -51,15 +67,24 @@ async function loadhtml(name) {
         console.error(`Missing target for ${name}`);
         return;
     }
-    // Show the window
-    container.classList.remove("hidden"); 
 
-    // Bring to front
+    // Show the window || bring to front || update title bar
+    container.classList.remove("hidden");
     container.style.zIndex = ++zIndexCounter;
-
-
-    // Optional: update title bar
     title.textContent = name.replace("_", " ").toUpperCase();
+
+    // gets all footer elements
+    const footerElem = document.querySelectorAll(".footer-elem");
+
+    footerElem.forEach((footerElem) => {
+        // updated name to match footerElem
+        name = name.toUpperCase().replace("_", " ");
+
+        if (name == footerElem.textContent && !container.classList.contains("hidden")) {
+            footerElem.classList.remove("hidden");
+            console.log();
+        }
+    });
 
     // Load page content
     try {
@@ -74,6 +99,6 @@ async function loadhtml(name) {
     // Make this window come to front on click
     container.addEventListener("mousedown", () => {
         container.style.zIndex = ++zIndexCounter;
-        console.log(zIndexCounter); 
+        console.log(zIndexCounter);
     });
 }

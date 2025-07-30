@@ -44,7 +44,7 @@
                             <img
                                 src="/assets/icons/melon_os.png"
                                 alt="melon os image"
-                                class="pl-3"
+                                class="icon-image pl-3"
                             />
                             <p
                                 class="border-r border-r-cocoaBrown border-b border-b-tan border-t border-t-sweeterPink border-dotted rounded-r-lg pr-6 pl-3"
@@ -75,10 +75,10 @@
                 <div class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-blushMilk">
                     <!-- left-pane -->
                     <div
-                        class="left-pane w-[86%] flex flex-row justify-center text-center pt-[15%]"
+                        class="left-pane overflow-hidden relative w-[86%] text-center"
                     >
-                        <!-- Welcome Screen -->
-                        <div id="welcome-screen" class="window z-10 w-[500px] h-[200px]">
+                        <!-- WELCOME SCREEN -->
+                        <div id="welcome-screen" class="window z-10 w-[65%] h-[60%] fixed left-[25%] top-[20%]" data-page="welcome">
                             <div class="title-bar">
                                 <div class="title-bar-text">WELCOME TO MY PORTFOLIO</div>
                                 <div class="title-bar-controls">
@@ -119,7 +119,7 @@
                             data-page="about_me"
                         >
                             <div class="title-bar font-blockBlueprint text-2xl">
-                                <div class="title-bar-text "></div>
+                                <div class="title-bar-text"></div>
                                 <div class="title-bar-controls">
                                     <button class="close-window">x</button>
                                 </div>
@@ -169,114 +169,80 @@
                     </div>
 
                     <!-- RIGHT PANE -->
+                    <div class="right-pane w-[14%] flex flex-col justify-start items-center">
 
-                    <div class="right-pane w-[14%] flex flex-col justify-start items-center pt-10">
-                        <!-- begin icon tabs -->
-                        <!-- clickable folders that open windows -->
+                        <!-- BEGIN TAB ICONS -->
+                        <div class="grid grid-cols-1 grid-rows-5 gap-0 w-full h-full">
 
-                        <!-- SKILLS ICON -->
-                        <div
-                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
-                            data-page="skills"
-                        >
-                            <div
-                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
-                            ></div>
+                            <!-- ABOUT ME ICON -->
+                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                                <img
+                                    src="/assets/icons/blue_person.png"
+                                    alt="about_me"
+                                    class="icon-image w-[60%] peer cursor-pointer z-10 relative"
+                                    onclick="loadhtml('about_me')"
+                                />
+                                <p class="leading-none text-md mt-0">About Me</p>
+                            </div>
 
-                            <img
-                                src="/assets/icons/computer.png"
-                                alt="flop_drive"
-                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
-                                onclick="loadhtml('skills')"
-                            />
-                            <p
-                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
-                                style="line-height: 1"
-                            >
-                                Skills
-                            </p>
-                        </div>
+                            <!-- SKILLS ICON -->
+                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                                <img
+                                    src="/assets/icons/ipod.png"
+                                    alt="flop_drive"
+                                    class="icon-image w-[60%] peer cursor-pointer z-10 relative"
+                                    onclick="loadhtml('skills')"
+                                />
+                                <p class="leading-none text-md mt-0">Skills</p>
+                            </div>
 
-                        <!-- ABOUT ME ICON -->
-                        <div
-                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
-                            data-page="about_me"
-                        >
-                            <div
-                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
-                            ></div>
-                            <img
-                                src="/assets/icons/text_file.png"
-                                alt="about_me"
-                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
-                                onclick="loadhtml('about_me')"
-                            />
-                            <p
-                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
-                                style="line-height: 1"
-                            >
-                                About Me
-                            </p>
-                        </div>
+                            <!-- PROJECTS ICON -->
+                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                                <img
+                                    src="/assets/icons/proj_computer.png"
+                                    alt="project"
+                                    class="icon-image w-[60%] peer cursor-pointer z-10 relative"
+                                    onclick="loadhtml('projects')"
+                                />
+                                <p class="leading-none text-md mt-0">Projects</p>
+                            </div>
 
-                        <!-- PROJECTS ICON -->
-                        <div
-                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
-                            data-page="projects"
-                            data-title="PROJECTS"
-                        >
-                            <div
-                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
-                            ></div>
-                            <img
-                                src="/assets/icons/projects.png"
-                                alt="project"
-                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
-                                onclick="loadhtml('projects')"
-                            />
-                            <p
-                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
-                                style="line-height: 1"
-                            >
-                                Projects
-                            </p>
-                        </div>
+                            <!-- CONTACT ME ICON -->
+                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                                <img
+                                    src="/assets/icons/closed_phone.png"
+                                    alt="contact_me"
+                                    class="icon-image w-[60%] peer cursor-pointer z-10 relative"
+                                    onclick="loadhtml('contact_me')"
+                                />
+                                <p class="leading-none text-md mt-0">Contact Me</p>
+                            </div>
 
-                        <!-- CONTACT ME ICON -->
-                        <div
-                            class="group relative mb-[50px] px-2 py-1 w-full flex flex-col items-center justify-center"
-                            data-page="contact_me"
-                            data-title="CONTACT ME"
-                        >
-                            <div
-                                class="absolute inset-0 rounded-sm border border-dotted border-[#a58d7f]/60 bg-[#a58d7f]/10 opacity-0 group-hover:opacity-100 pointer-events-none z-0"
-                            ></div>
-                            <img
-                                src="/assets/icons/contact_me.png"
-                                alt="contact_me"
-                                class="w-[60%] max-w-[42px] min-w-[30px] peer cursor-pointer image-pixel object-contain z-10 relative"
-                                onclick="loadhtml('contact_me')"
-                            />
-                            <p
-                                class="mt-[3px] text-[0.85rem] sm:text-[0.9rem] z-10 relative peer-hover:text-milkTeaBrown peer-hover:underline peer-hover:drop-shadow-md"
-                                style="line-height: 1"
-                            >
-                                Contact Me
-                            </p>
+                            <!-- EVENTUAL TRASH BIN -->
+                            <div></div>
                         </div>
                     </div>
-                </div>
 
                 <!-- FOOTER TO EMULATE START NAV -->
                 <div
-                    class="fixed bottom-0 bg-vanillaCream z-10 w-full h-12 rounded-t-md border-t-[rgba(0, 0, 0, 0.3)]"
+                    class="footer fixed bottom-0 bg-vanillaCream z-10 w-full h-12 rounded-t-md border-t-[rgba(0, 0, 0, 0.3)]"
                 >
                     <div class="flex flex-row p-2">
                         <div
-                            class="flex flex-row gap-2 bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg"
+                            class="flex flex-row gap-2 bg-vanilla cursor-pointer border py-1 px-4 mr-10 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg"
                         >
                             <i class="fa-solid fa-home pt-[2px]"></i>
                             <p>HOME</p>
+                        </div>
+                        
+                        <div class="flex flex-row gap-2">
+
+                            
+                            <div class="footer-elem bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">WELCOME</div>
+                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">ABOUT ME</div>
+                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">SKILLS</div>
+                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">PROJECTS</div>
+                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">CONTACT ME</div>
                         </div>
                     </div>
                 </div>

@@ -64,11 +64,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.pane-filler {
-    box-shadow: 4px -4px 6px rgba(0, 0, 0, 0.09);
+.icon-image {
+    image-rendering: pixelated;
+
+    /* to improve user interaction, highlighting text will be disabled here */
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-
+.left-pane {
+    height: calc(100vh - 36px - 48px);    /* tailwind does not support multi calc inputs */ 
+}
 
 :root {
     /* Soft Neutrals */
@@ -135,5 +142,4 @@
             var(--sweeter-pink) 50%,
             var(--sweet-pink) 100%
         );
-
 }
