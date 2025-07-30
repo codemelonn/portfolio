@@ -52,17 +52,30 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Adobe Dia";
+    src: url("/assets/fonts/Adobe\ Dia.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
 
 @import "./window.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.pane-filler {
-    box-shadow: 4px -4px 6px rgba(0, 0, 0, 0.09);
+.icon-image {
+    image-rendering: pixelated;
+
+    /* to improve user interaction, highlighting text will be disabled here */
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-
+.left-pane {
+    height: calc(100vh - 36px - 48px);    /* tailwind does not support multi calc inputs */ 
+}
 
 :root {
     /* Soft Neutrals */
@@ -111,10 +124,10 @@
 
     --brown-titlebar-stripes: repeating-linear-gradient(
         to bottom,
-        var(--coffee-brown) 0px,
-        var(--coffee-brown) 3.5px,
-        var(--cocoa-brown) 3.5px,
-        var(--cocoa-brown) 6px
+        var(--melon-rind) 0px,
+        var(--melon-rind) 3.5px,
+        var(--mint-dust) 3.5px,
+        var(--mint-dust) 6px
     );
 
     --background-gradient: radial-gradient(
@@ -129,5 +142,4 @@
             var(--sweeter-pink) 50%,
             var(--sweet-pink) 100%
         );
-
 }

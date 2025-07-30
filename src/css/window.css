@@ -1,51 +1,32 @@
 /* WINDOW */
 .window {
-    border-radius: 8px;
-    background-color: var(--milk-tea-brown);
-    border: 2px solid var(--coffee-brown);
-    box-shadow: 2px 2px 0 #a58d7f, /* outer shadow bottom-right */ -1px -1px 0 var(--bubblegum-pink); /* outer highlight top-left */
+    border-radius: 0;
+    background-color: var(--vanilla-cream);
+    border: 2px solid var(--cocoa-text);
+    border-radius: 4px;
     overflow: hidden;
+    position: absolute;
+    box-shadow: 4px 4px 0 var(--milk-brown);
 }
 
 /* TITLE BAR */
 .title-bar {
-    background-color: var(--coffee-brown);
-    color: var(--melon-rind);
+    background-color: var(--sweet-pink);
+    color: var(--cocoa-text);
+    text-shadow: 1px 1px 1px var(--vanilla-cream);
     height: 30px;
-    flex-shrink: 0;
-    padding: 0 6px;
+    border-bottom: 2px solid var(--cafe-noir);
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    border-bottom: 2px solid #3d2f28;
-    box-shadow: inset -2px -2px var(--coffee-brown), inset 2px 2px var(--milk-tea-brown);
-}
-
-.title-bar::before {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    right: 5%;
-    background-image: var(--brown-titlebar-stripes);
-
-    background-repeat: repeat-x;
-    background-size: auto 30px;
-    background-position: center top;
-    z-index: 0;
+    box-shadow: inset 0 1px 0 var(--shell-pink);
 }
 
 .title-bar-text {
-    position: relative;
-    z-index: 1;
-    background-color: var(--coffee-brown); /* exact same as .title-bar background */
-    text-shadow: 2px 2px 2px var(--ink);
-    padding: 0 12px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-weight: bold;
-    line-height: 1;
-
+    font-family: "Block Blueprint", sans-serif;
+    font-size: 30px;
+    padding-left: 15px; 
+    
     /* to improve user interaction, highlighting text will be disabled here */
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -55,66 +36,132 @@
 /* CONTROL BUTTONS */
 .title-bar-controls {
     position: absolute;
-    right: 10px;
+    right: 8px;
     top: 4px;
     display: flex;
-    gap: 2px;
+    gap: 4px;
 }
 
 .title-bar-controls button {
-    background-color: var(--milk-tea-brown);
-    border: 2px outset var(--ink);
     width: 21px;
     height: 21px;
-    padding: 0;
     font-size: 13px;
-    font-weight: bolder;
-    font-family: "VP Pixel", sans-serif;
-    color: var(--vanilla-cream);
-    box-shadow: inset -2px -2px var(--cocoa-brown), inset 2px 2px var(--cocoa-brown);
+    color: var(--cocoa-text);
+    cursor: pointer;
+    border: 1px dotted var(--cafe-noir);
+    border-radius: 4px; 
+    background-color: var(--rose-blush);
+    font-weight: bold;
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
-    line-height: 1;
-    cursor: pointer;
+    box-shadow: 2px 2px 0 var(--milk-brown);
+
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .title-bar-controls button:hover {
-    background-color: var(--bone); /* green button shell on hover */
-    color: var(--moss-green); /* darker brown text on hover for contrast */
-    box-shadow: inset -2px -2px var(--milk-brown), inset 2px 2px var(--milk-brown);
+    background-color: var(--mint-dust);
+    color: var(--ink);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--milk-brown);
+}
+
+.title-bar-controls button:active {
+    background-color: var(--mint-glint);
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
 /* WINDOW BODY */
 .window-body {
     background-color: var(--whisper-pink);
-    padding: 8px;
-    border: 2px solid var(--ashy-brown);
-    box-shadow: inset -2px -2px #ffffff, inset 2px 2px #a58d7f;
-    color: #3d2f28;
-    flex-grow: 1;
+    padding: 12px;
     overflow-y: auto;
+    padding-bottom: 36px;
+    min-height: 200px;
+    border-left: 2px solid var(--vanilla-cream);
+    border-right: 2px solid var(--vanilla-cream);
+    box-shadow: inset 1px 1px 2px rgba(215, 164, 143, 0.2);
 }
 
 .window-footer {
-    background-color: var(--coffee-brown); /* match title bar */
-    color: var(--melon-rind); /* match title bar text */
-    height: 24px; /* same height as title bar */
+    background-color: var(--milk-brown);
+    color: var(--vanilla-cream);
+    height: 24px;
     display: flex;
-    flex-shrink: 0;
     align-items: center;
     justify-content: space-between;
-    padding: 0 6px;
-    position: relative;
-    border-top: 2px solid #3d2f28; /* match title bar border */
-    box-shadow: inset -2px -2px var(--coffee-brown), inset 2px 2px var(--milk-tea-brown); /* match bevel */
-    font-family: monospace;
-    font-size: 12px;
+    padding: 0 8px;
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
+    border-top: 2px solid var(--cafe-noir);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: inset 0 1px 0 var(--vanilla-cream);
 
     /* to improve user interaction, highlighting text will be disabled here */
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+
+.scroll-left, .scroll-right {
+    width: 16px;
+    height: 16px;
+    background-color: var(--vanilla);
+    border: 1px dotted var(--cocoa-text);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+    color: var(--cocoa-text);
+    font-weight: bold;
+    transition: all 0.1s ease;
+    box-shadow: inset 1px 1px 0 var(--vanilla-cream);
+}
+
+.scroll-left:hover, .scroll-right:hover {
+    background-color: var(--mint-glint);
+    color: var(--ink);
+    transform: translate(1px, 1px);
+    box-shadow: inset 1px 1px 0 var(--moss-green);
+}
+
+.scroll-left:active, .scroll-right:active {
+    background-color: var(--mint-dust);
+    color: var(--ink);
+    box-shadow: inset -1px -1px 0 var(--cafe-noir);
+}
+
+.scroll-bar {
+    flex: 1;
+    height: 12px;
+    margin: 0 6px;
+    background-color: var(--sweeter-pink);
+    border: 2px inset var(--peach-blush);
+    position: relative;
+    box-shadow: inset 1px 1px 1px rgba(94, 71, 61, 0.2);
+}
+
+.scroll-bar::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1.5px;
+    width: 24px;
+    height: 6px;
+    background-color: var(--blush-pink);
+    border: 1px dotted var(--rose-blush);
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0 var(--sweet-pink);
 }

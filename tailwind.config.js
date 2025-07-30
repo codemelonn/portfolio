@@ -53,6 +53,7 @@ module.exports = {
             blockBlueprint: ['"Block Blueprint"', "sans-serif"],
             MicrosoftOG: ['"Microsoft OG"', "sans-serif"],
             VCR: ['"VCR"', "sans-serif"],
+            AdobeDia: ['"Adobe Dia"', "sans-serif"], 
         },
 
         extend: {},
