@@ -19,7 +19,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            loadhtml("");
+            loadhtml("projects");
         });
     </script>
 
@@ -74,19 +74,61 @@
                 <!-- environment to emulate the desktop screen -->
                 <div class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-blushMilk">
                     <!-- left-pane -->
-                    <div
-                        class="left-pane overflow-hidden relative w-[86%] text-center"
-                    >
+                    <div class="left-pane overflow-hidden relative w-[86%] text-center">
                         <!-- WELCOME SCREEN -->
-                        <div id="welcome-screen" class="window z-10 w-[65%] h-[60%] fixed left-[25%] top-[20%]" data-page="welcome">
+                        <div
+                            id="welcome-screen"
+                            class=" window z-10 w-[65%] h-[65%] fixed left-[25%] top-[20%]"
+                            data-page="welcome"
+                        >
                             <div class="title-bar">
                                 <div class="title-bar-text">WELCOME TO MY PORTFOLIO</div>
                                 <div class="title-bar-controls">
                                     <button aria-label="Close" class="close-window">✕</button>
                                 </div>
                             </div>
-                            <div class="window-body">
-                                <p>Hello there! My name is Amara and</p>
+                            <div class="window-body h-full overflow-y-auto">
+                                <!-- WELCOME CONTENT -->
+                                <div
+                                    class="grid grid-cols-[1fr_1fr] grid-rows-[max-content_max-content] gap-y-3 w-full pb-4"
+                                >
+                                    <div
+                                        class="col-span-2 text-left text-xl border-l-4 pl-5 py-3 mx-1 font-extrabold bg-bubblegumPink/[.13]"
+                                    >
+                                        <q class="text-milkBrown">
+                                            I cannot fix on the hour, or the spot, or the look or
+                                            the words, which laid the foundation. It is too long
+                                            ago. I was in the middle before I knew that I had begun
+                                        </q>
+                                        <p class="text-sm pl-4 pt-3 text-kombuGreen">
+                                            <em>- Jane Austen</em>
+                                        </p>
+                                    </div>
+                                    <div class="row-span-3 row-start-2">
+                                        <div class="pl-5 hover:shadow-sm">
+                                            <h1
+                                                class="font-blockBlueprint text-melonRind border-b-2 border-dashed text-4xl text-left"
+                                            >
+                                                Hello! I'm Amara
+                                            </h1>
+                                            <p
+                                                class="text-left text-lg py-5 px-1 mt-3 tracking-wider bg-sweetTarts/[.13]"
+                                            >
+                                                This portfolio is a passion project of mine. Feel
+                                                free to click around and find out a little about me!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="row-span-3 row-start-2 content-center justify-items-center"
+                                    >
+                                        <img
+                                            src="/assets/images/desktop.png"
+                                            alt="super cute desktop"
+                                            class="icon-image w-[70%]"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                             <div class="window-footer">
                                 <div class="scroll-left">◀</div>
@@ -134,7 +176,7 @@
 
                         <!-- PROJECTS PAGE -->
                         <div
-                            class="window hidden w-[900px] h-[500px] fixed left-[200px] top-[100px]"
+                            class="window hidden w-[75%] h-[85%] fixed left-[5%] top-[5%]"
                             data-page="projects"
                         >
                             <div class="title-bar font-blockBlueprint text-2xl">
@@ -170,12 +212,12 @@
 
                     <!-- RIGHT PANE -->
                     <div class="right-pane w-[14%] flex flex-col justify-start items-center">
-
                         <!-- BEGIN TAB ICONS -->
                         <div class="grid grid-cols-1 grid-rows-5 gap-0 w-full h-full">
-
                             <!-- ABOUT ME ICON -->
-                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                            <div
+                                class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown"
+                            >
                                 <img
                                     src="/assets/icons/blue_person.png"
                                     alt="about_me"
@@ -186,34 +228,46 @@
                             </div>
 
                             <!-- SKILLS ICON -->
-                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                            <div
+                                class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown"
+                            >
                                 <img
                                     src="/assets/icons/ipod.png"
                                     alt="flop_drive"
                                     class="icon-image w-[60%] peer cursor-pointer z-10 relative"
                                     onclick="loadhtml('skills')"
+                                    onmouseover="this.src='/assets/icons/ipod_ani.png'"
+                                    onmouseout="this.src='/assets/icons/ipod.png'"
                                 />
                                 <p class="leading-none text-md mt-0">Skills</p>
                             </div>
 
                             <!-- PROJECTS ICON -->
-                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                            <div
+                                class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown"
+                            >
                                 <img
                                     src="/assets/icons/proj_computer.png"
                                     alt="project"
                                     class="icon-image w-[60%] peer cursor-pointer z-10 relative"
                                     onclick="loadhtml('projects')"
+                                    onmouseover="this.src='/assets/icons/proj_computer_ani.png'"
+                                    onmouseout="this.src='/assets/icons/proj_computer.png'"
                                 />
                                 <p class="leading-none text-md mt-0">Projects</p>
                             </div>
 
                             <!-- CONTACT ME ICON -->
-                            <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
+                            <div
+                                class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown"
+                            >
                                 <img
                                     src="/assets/icons/closed_phone.png"
                                     alt="contact_me"
-                                    class="icon-image w-[60%] peer cursor-pointer z-10 relative"
+                                    class="icon-image contact-me w-[60%] peer cursor-pointer z-10 relative"
                                     onclick="loadhtml('contact_me')"
+                                    onmouseover="this.src='/assets/icons/phone_ani.png'"
+                                    onmouseout="this.src='/assets/icons/closed_phone.png'"
                                 />
                                 <p class="leading-none text-md mt-0">Contact Me</p>
                             </div>
@@ -222,6 +276,7 @@
                             <div></div>
                         </div>
                     </div>
+                </div>
 
                 <!-- FOOTER TO EMULATE START NAV -->
                 <div
@@ -234,15 +289,33 @@
                             <i class="fa-solid fa-home pt-[2px]"></i>
                             <p>HOME</p>
                         </div>
-                        
-                        <div class="flex flex-row gap-2">
 
-                            
-                            <div class="footer-elem bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">WELCOME</div>
-                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">ABOUT ME</div>
-                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">SKILLS</div>
-                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">PROJECTS</div>
-                            <div class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg">CONTACT ME</div>
+                        <div class="flex flex-row gap-2">
+                            <div
+                                class="footer-elem bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"
+                            >
+                                WELCOME
+                            </div>
+                            <div
+                                class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"
+                            >
+                                ABOUT ME
+                            </div>
+                            <div
+                                class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"
+                            >
+                                SKILLS
+                            </div>
+                            <div
+                                class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"
+                            >
+                                PROJECTS
+                            </div>
+                            <div
+                                class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"
+                            >
+                                CONTACT ME
+                            </div>
                         </div>
                     </div>
                 </div>

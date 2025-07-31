@@ -29,25 +29,22 @@ interact(".window").draggable({
 // screen closing || footer visibility
 
 document.querySelectorAll(".close-window").forEach((btn) => {
-
     btn.addEventListener("click", function (e) {
-
-        // parent window || footer elements || name of page 
+        // parent window || footer elements || name of page
         const windowDiv = e.target.closest(".window");
         const footerElem = document.querySelectorAll(".footer-elem");
-        pageName = windowDiv.dataset.page.toUpperCase().replace("_", " ");
+        const pageName = windowDiv.dataset.page.toUpperCase().replace("_", " ");
 
         if (windowDiv) {
-            // hide window 
+            // hide window
             windowDiv.classList.add("hidden");
 
-            // hide footer 
+            // hide footer
             footerElem.forEach((footerElem) => {
-                if (pageName == footerElem.textContent) {
+                if (pageName.trim() === footerElem.textContent.trim().toUpperCase()) {
                     footerElem.classList.add("hidden");
                 }
             });
-            
         } else {
             console.warn("No parent window found");
         }
@@ -60,11 +57,11 @@ let zIndexCounter = 100;
 
 async function loadhtml(name) {
     const container = document.querySelector(`.window[data-page="${name}"]`);
-    const body = container?.querySelector(".window-body");
-    const title = container?.querySelector(".title-bar-text");
+    const body = container.querySelector(".window-body");
+    const title = container.querySelector(".title-bar-text");
 
-    if (!container || !body || !title) {
-        console.error(`Missing target for ${name}`);
+    if (!container) {
+        console.error(`No window container found for ${name}`);
         return;
     }
 
@@ -77,19 +74,19 @@ async function loadhtml(name) {
     const footerElem = document.querySelectorAll(".footer-elem");
 
     footerElem.forEach((footerElem) => {
-        // updated name to match footerElem
-        name = name.toUpperCase().replace("_", " ");
+        const updatedName = name.toUpperCase().replace("_", " ").trim();
+        const footerText = footerElem.textContent.trim().toUpperCase();
 
-        if (name == footerElem.textContent && !container.classList.contains("hidden")) {
+        if (updatedName === footerText && !container.classList.contains("hidden")) {
             footerElem.classList.remove("hidden");
-            console.log();
         }
     });
 
     // Load page content
     try {
-        const res = await fetch(`./pages/${name}.html`);
-        if (!res.ok) throw new Error(`Failed to load ${name}`);
+        const updatedName = name.toLowerCase().replaceAll(" ", "_");
+        const res = await fetch(`./pages/${updatedName}.html`);
+        if (!res.ok) throw new Error(`Failed to load ${updatedName}`);
         const html = await res.text();
         body.innerHTML = html;
     } catch (err) {
@@ -99,6 +96,5 @@ async function loadhtml(name) {
     // Make this window come to front on click
     container.addEventListener("mousedown", () => {
         container.style.zIndex = ++zIndexCounter;
-        console.log(zIndexCounter);
     });
 }

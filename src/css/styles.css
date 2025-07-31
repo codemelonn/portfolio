@@ -77,6 +77,7 @@
     height: calc(100vh - 36px - 48px);    /* tailwind does not support multi calc inputs */ 
 }
 
+
 :root {
     /* Soft Neutrals */
     --antique-white: #faebd7;
