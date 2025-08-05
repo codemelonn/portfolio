@@ -32,6 +32,26 @@
     color: var(--mint-dust);
 }
 
+/* fun button looking adjectives! */
+
+.adj {
+    background-color: var(--vanilla-cream);
+    position: relative;
+    display: inline-block;
+    padding: 3px 15px;      /* top and bottom */ 
+    border: 1px solid var(--moss-green);
+    border-radius: 15px;
+}
 
 
+.adj:focus::after, 
+.adj:hover::after {
+    content: attr(data-adjTip);
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
 
+    
+    min-width: max-content;
+    z-index: 20;
+}

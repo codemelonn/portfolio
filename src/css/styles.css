@@ -60,6 +60,7 @@
 }
 
 @import "./window.css";
+@import "./projects.css"; 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,6 +77,38 @@
 .left-pane {
     height: calc(100vh - 36px - 48px);    /* tailwind does not support multi calc inputs */ 
 }
+
+/* SCROLL BAR GLOBAL STYLING */ 
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f5f3f0;       /* vanilla */
+    border: 2px solid #d2b48c; /* tan */
+    border-radius: 0;          /* sharp edges */
+    box-sizing: border-box;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #b4d7a8;       /* matcha */
+    border: 2px solid #8b6d5c; /* cocoa brown */
+    border-radius: 0;          /* blocky edges */
+    box-sizing: border-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f6cadd;       /* pastel pink */
+    border-color: #8b6d5c;     /* cocoa brown */
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: #f5f3f0;        /* vanilla */
+    border: 2px solid #d2b48c; /* tan */
+    border-radius: 0;
+  }
+  
 
 
 :root {
