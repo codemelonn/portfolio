@@ -7,13 +7,13 @@
         <link rel="stylesheet" href="/src/css/styles.css" />
         <link rel="stylesheet" href="/src/css/projects.css" />
     </head>
-    <body class="h-screen">
+    <body class="h-full overflow-hidden">
         <!-- EXPLORER SHELL -->
-        <div class="">
-            <div class="flex flex-col mx-4 rounded-[5px] bg-vanillaCream border-[2px] border-roseBlush [border-style:inset]">
+        <div class="h-full flex flex-col">
+            <div class="flex flex-col mx-2 h-full rounded-[5px] bg-vanillaCream border-[2px] border-roseBlush [border-style:inset]">
                 <!-- TOP TOOLBAR -->
                 <div
-                    class="border flex rounded-sm items-center gap-2 px-3 py-2 bg-vanilla border-b-[2px] border-milkTeaBrown [border-bottom-style:inset]"
+                    class="border flex rounded-sm items-center gap-2 px-2 py-2 bg-vanilla border-b-[2px] border-milkTeaBrown [border-bottom-style:inset]"
                 >
                     <!-- VIEW BUTTONS (NON-FUNCTIONAL FOR NOW)-->
                     <div class="flex rounded-sm p-1 items-center gap-2">
@@ -41,14 +41,58 @@
                     </div>
                 </div>
 
-                <!-- FOLDER CONTENT SECTION -->
-                <div class="flex-1 p-4 bg-vanillaCream">
-                    <div class="w-full">
-                        <div class="flex flex-row gap-10 ">
-                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
-                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
-                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
-                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
+                <!-- FOLDER CONTENT -->
+                <div class="flex-1 min-h-0 bg-vanillaCream p-4 overflow-hidden">
+                    <!-- FOLDER CONTAINER -->
+                    <div class="h-full overflow-y-auto">
+                        <div class="h-full grid grid-cols-4 gap-y-8 justify-items-center py-2">
+                            <!-- WEB DEVELOPMENT ICON -->
+                            <div
+                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                            >
+                                <img src="/assets/icons/folder.png" alt="custom folder" class="w-[80px] icon-image" />
+                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Web Development</p>
+                            </div>
+
+                            <!-- DATABASE ICON -->
+                            <div
+                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                            >
+                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Database</p>
+                            </div>
+
+                            <!-- CYBERSECURITY ICON -->
+                            <div
+                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                            >
+                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Cybersecurity</p>
+                            </div>
+
+                            <!-- DIGITAL FORENSICS ICON -->
+                            <div
+                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                            >
+                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Digital Forensics</p>
+                            </div>
+
+                            <!-- SOFTWARE DEVELOPMENT ICON -->
+                            <div
+                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                            >
+                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Software Development</p>
+                            </div>
+
+                            <!-- GAMES ICON -->
+                            <div
+                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                            >
+                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Games</p>
+                            </div>
                         </div>
                     </div>
                 </div>
