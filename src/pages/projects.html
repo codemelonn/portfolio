@@ -10,14 +10,14 @@
     <body class="h-screen">
         <!-- EXPLORER SHELL -->
         <div class="">
-            <div class="flex flex-col rounded-[10px] bg-vanillaCream border-[2px] border-milkTeaBrown [border-style:inset]">
+            <div class="flex flex-col mx-4 rounded-[5px] bg-vanillaCream border-[2px] border-roseBlush [border-style:inset]">
                 <!-- TOP TOOLBAR -->
                 <div
                     class="border flex rounded-sm items-center gap-2 px-3 py-2 bg-vanilla border-b-[2px] border-milkTeaBrown [border-bottom-style:inset]"
                 >
                     <!-- VIEW BUTTONS (NON-FUNCTIONAL FOR NOW)-->
-                    <div class="border flex rounded-sm p-1 border-blushPink items-center gap-2">
-                        <div class="flex flex-row gap-1  border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText">
+                    <div class="flex rounded-sm p-1 items-center gap-2">
+                        <div class="flex flex-row gap-1 font-blockBlueprint text-lg text-cocoaText">
                             <button class="px-2 bg-whisperPink grid place-items-center">☰</button>
                             <button class="px-3 bg-whisperPink grid place-items-center">◫</button>
                             <button class="px-2 bg-whisperPink grid place-items-center">▣</button>
@@ -25,22 +25,32 @@
                     </div>
 
                     <!-- FOLDER PATHS -->
-                    <div class="flex-1 flex items-center gap-2 px-3 py-1 bg-vanillaCream border-[2px] border-milkTeaBrown">
-                        <span class="px-3 py-[2px] border-[2px] border-bone bg-vanilla font-blockBlueprint text-sm text-cocoaText">Desktop</span>
-                        <span class="px-3 py-[2px] border-[2px] border-bone bg-sweetPink font-blockBlueprint text-sm text-cocoaText">Projects</span>
+                    <div class="flex-1 flex items-center gap-2 px-3 py-1 bg-vanillaCream border-[1px] border-sweetPink">
+                        <span class="px-3 py-[2px] font-blockBlueprint text-sm text-cocoaText">Desktop</span>
+                        <span class="text-cocoaText text-lg">></span>
+                        <span class="px-3 py-[2px] bg-vanilla font-blockBlueprint text-sm text-cocoaText rounded-full">Projects</span>
                     </div>
 
                     <!-- SEARCH BUTTON (NON-FUNCTIONAL FOR NOW) -->
                     <div class="flex items-center gap-2">
-                        <button class="grid place-items-center px-3 bg-vanillaCream border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText">
+                        <button
+                            class="grid place-items-center px-[10px] bg-whisperPink border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText"
+                        >
                             ⌕
                         </button>
                     </div>
                 </div>
 
-                <!-- FOLDER SECTION -->
+                <!-- FOLDER CONTENT SECTION -->
                 <div class="flex-1 p-4 bg-vanillaCream">
-                    <div class="w-full"></div>
+                    <div class="w-full">
+                        <div class="flex flex-row gap-10 ">
+                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
+                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
+                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
+                            <img src="/assets/icons/folder.png" alt="custom folder" class="icon-image w-[10%]" />
+                        </div>
+                    </div>
                 </div>
 
                 <!-- FINDER FOOTER -->
