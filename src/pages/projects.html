@@ -4,294 +4,55 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Projects</title>
+        <link rel="stylesheet" href="/src/css/styles.css" />
         <link rel="stylesheet" href="/src/css/projects.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     </head>
     <body class="h-screen">
-        <div class="screen-container h-full flex flex-col">
-            <div class="tab-container flex flex-wrap max-w-[100%]">
-                <!-- WEB DEV SECTION -->
-                <input type="radio" id="tab-1" name="tabs" checked="checked" />
-                <label for="tab-1" class="px-5 mx-1 rounded-t-sm">WEB DEV</label>
-
-                <!-- PORTFOLIO PROJECT -->
-                <div class="tab overflow-y-auto mx-1 p-5 pt-3">
-                    <div class="py-2 px-3 border border-melonRind bg-vanilla/50 rounded-sm">
-                        <!-- TOP BAR: TITLE, STATUS, AND TECH STACK -->
-
-                        <div class="flex justify-between items-center mb-3 pb-1 border-b border-dashed border-mossGreen">
-                            <div class="flex items-center gap-3">
-                                <h1 class="font-blockBlueprint text-melonRind text-xl">L. Inodorus -- Portfolio</h1>
-                                <span
-                                    class="text-xs px-2 py-0.5 bg-mintGlint border border-dashed border-mossGreen text-mossGreen font-blockBlueprint"
-                                >
-                                    LIVE
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-5 px-2 py-1 bg-vanilla/80 border border-dashed border-milkTeaBrown rounded">
-                                <i class="devicon-html5-plain colored text-lg"></i>
-                                <i class="devicon-css3-plain colored text-lg"></i>
-                                <i class="devicon-tailwindcss-original colored text-lg"></i>
-                                <i class="devicon-javascript-plain colored text-lg"></i>
-                            </div>
-                        </div>
-
-                        <!-- MAIN CONTENT ROW -->
-                        <div class="grid grid-cols-[1fr_3fr_1.5fr_1.5fr_1.25fr] gap-2 items-start">
-                            <!-- IMAGE -->
-                            <div>
-                                <img
-                                    src="/assets/images/melon_ani.png"
-                                    alt="animated melon!"
-                                    class="icon-image w-full aspect-square rounded border-2 border-milkTeaBrown/50"
-                                />
-                                <div class="text-left mt-1 border-t border-dashed border-milkTeaBrown">
-                                    <span class="text-sm font-blockBlueprint text-mossGreen">release v1.0</span>
-                                </div>
-                            </div>
-
-                            <!-- DESCRIPTION -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-milkTeaBrown bg-vanilla/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left font-blockBlueprint text-mossGreen mb-1 bg-milkTeaBrown/20 py-1 px-2 border-b border-dashed border-milkTeaBrown"
-                                >
-                                    OVERVIEW
-                                </h3>
-                                <div
-                                    class="flex-1 overflow-y-auto p-3 text-md text-left text-pretty text-cocoaBrown leading-tight tracking-tight space-y-3"
-                                >
-                                    <p>
-                                        Built from scratch as both a technical showcase and personality reflection. Inspired by retro computer
-                                        aesthetics to highlight creative approach and attention to detail.
-                                    </p>
-                                    <div class="space-y-1 text-sm">
-                                        <div class="flex gap-2">
-                                            <span class="text-mossGreen font-blockBlueprint">LAST UPDATED:</span>
-                                            <span class="text-cocoaBrown">Aug 4, 2025</span>
-                                        </div>
-                                        <div class="flex gap-2">
-                                            <span class="text-mossGreen font-blockBlueprint">TYPE:</span>
-                                            <span class="text-cocoaBrown">Personal</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT ROLE -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-mossGreen bg-mintGlint/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left font-blockBlueprint text-mossGreen mb-1 bg-mossGreen/20 py-1 px-2 border-b border-dashed border-mossGreen"
-                                >
-                                    ROLE
-                                </h3>
-                                <div class="flex-1 overflow-y-auto p-1 text-md text-left text-pretty text-cocoaBrown space-y-1">
-                                    <div>• UI/UX Designer</div>
-                                    <div>• Fullstack Developer</div>
-                                    <div>• Creative Lead</div>
-                                </div>
-                            </div>
-
-                            <!-- FEATURES -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-cocoaBrown bg-whisperPink/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left font-blockBlueprint text-mossGreen mb-1 bg-milkTeaBrown/20 py-1 px-2 border-b border-dashed border-cocoaBrown"
-                                >
-                                    FEATURES
-                                </h3>
-                                <div class="flex-1 overflow-y-auto p-1 text-md text-left text-pretty text-cocoaBrown space-y-0.5">
-                                    <div>• Responsive design</div>
-                                    <div>• Draggable windows</div>
-                                    <div>• Tab navigation</div>
-                                    <div>• Dynamic loading</div>
-                                    <div>• Custom animations</div>
-                                </div>
-                            </div>
-
-                            <!-- ACTIONS & INFO -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-melonRind bg-mintGlint/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left text-pretty font-blockBlueprint text-mossGreen mb-1 bg-melonRind/20 py-1 px-2 border-b border-dashed border-melonRind"
-                                >
-                                    LINKS
-                                </h3>
-                                <div class="flex-1 overflow-y-auto p-1 space-y-2">
-                                    <div class="flex flex-col gap-1">
-                                        <button
-                                            class="text-md px-2 py-1 bg-melonRind/20 border border-dashed border-melonRind text-cocoaBrown font-blockBlueprint hover:bg-melonRind/40"
-                                        >
-                                            VIEW LIVE
-                                        </button>
-                                        <button
-                                            class="text-md px-2 py-1 bg-mossGreen/20 border border-dashed border-mossGreen text-cocoaBrown font-blockBlueprint hover:bg-mossGreen/40"
-                                        >
-                                            GITHUB
-                                        </button>
-                                    </div>
-                                    <div class="border-t border-dashed border-melonRind pt-2 text-md text-cocoaBrown">
-                                        <div class="flex justify-between">
-                                            <span class="font-blockBlueprint text-mossGreen">YEAR:</span>
-                                            <span>2025</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PORTFOLIO PROJECT -->
-
-                    <!-- PEARL PROJECT -->
-
-                    <div class="py-2 px-3 mt-5 border border-melonRind bg-vanilla/50 rounded-sm">
-                        <!-- TOP BAR: TITLE, STATUS, AND TECH STACK -->
-
-                        <div class="flex justify-between items-center mb-3 pb-1 border-b border-dashed border-mossGreen">
-                            <div class="flex items-center gap-3">
-                                <h1 class="font-blockBlueprint text-melonRind text-xl">Pearl -- Tetris Emulation</h1>
-                                <span
-                                    class="text-xs px-2 py-0.5 bg-mintGlint border border-dashed border-mossGreen text-mossGreen font-blockBlueprint"
-                                >
-                                    LIVE
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-5 px-2 py-1 bg-vanilla/80 border border-dashed border-milkTeaBrown rounded">
-                                <i class="devicon-html5-plain colored text-lg"></i>
-                                <i class="devicon-css3-plain colored text-lg"></i>
-                                <i class="devicon-socketio-original colored text-lg"></i>
-                                <i class="devicon-javascript-plain colored text-lg"></i>
-                                <i class="devicon-express-original colored text-lg"></i>
-                                <i class="devicon-nodemon-plain colored text-lg"></i>
-                            </div>
-                        </div>
-
-                        <!-- MAIN CONTENT ROW -->
-                        <div class="grid grid-cols-[1fr_3fr_1.5fr_1.5fr_1.25fr] gap-2 items-start">
-                            <!-- IMAGE -->
-                            <div>
-                                <img
-                                    src=""
-                                    alt="animated pearl!"
-                                    class="icon-image w-full aspect-square rounded border-2 border-milkTeaBrown/50"
-                                />
-                                <div class="text-left mt-1 border-t border-dashed border-milkTeaBrown">
-                                    <span class="text-sm font-blockBlueprint text-mossGreen">release v1.0</span>
-                                </div>
-                            </div>
-
-                            <!-- DESCRIPTION -->
-
-                            <div class="h-[200px] flex flex-col border border-dashed border-milkTeaBrown bg-vanilla/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left font-blockBlueprint text-mossGreen mb-1 bg-milkTeaBrown/20 py-1 px-2 border-b border-dashed border-milkTeaBrown"
-                                >
-                                    OVERVIEW
-                                </h3>
-                                <div
-                                    class="flex-1 overflow-y-auto p-3 text-md text-left text-pretty text-cocoaBrown leading-tight tracking-tight space-y-3"
-                                >
-                                    <p>
-                                        Pearl is a retro-inspired, Tetris-style game I built solo for my web dev class. All artwork and game
-                                        pieces were hand-drawn and uniquely colored by me. The game features functional online multiplayer, letting
-                                        two players compete for the highest score. Some aesthetic elements are still in progress, but the core
-                                        gameplay is complete and fully playable.
-                                    </p>
-                                    <div class="space-y-1 text-sm">
-                                        <div class="flex gap-2">
-                                            <span class="text-mossGreen font-blockBlueprint">LAST UPDATED:</span>
-                                            <span class="text-cocoaBrown">Apr 19, 2025</span>
-                                        </div>
-                                        <div class="flex gap-2">
-                                            <span class="text-mossGreen font-blockBlueprint">TYPE:</span>
-                                            <span class="text-cocoaBrown">Experimental</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT ROLE -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-mossGreen bg-mintGlint/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left font-blockBlueprint text-mossGreen mb-1 bg-mossGreen/20 py-1 px-2 border-b border-dashed border-mossGreen"
-                                >
-                                    ROLE
-                                </h3>
-                                <div class="flex-1 overflow-y-auto p-1 text-md text-left text-pretty text-cocoaBrown space-y-1">
-                                    <div>• UI/UX Designer</div>
-                                    <div>• Frontend Developer</div>
-                                    <div>• Backend Developer</div>
-                                    <div>• Project Lead</div>
-                                </div>
-                            </div>
-
-                            <!-- FEATURES -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-cocoaBrown bg-whisperPink/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left font-blockBlueprint text-mossGreen mb-1 bg-milkTeaBrown/20 py-1 px-2 border-b border-dashed border-cocoaBrown"
-                                >
-                                    FEATURES
-                                </h3>
-                                <div class="flex-1 overflow-y-auto p-1 text-md text-left text-pretty text-cocoaBrown space-y-0.5">
-                                    <div>• Online multiplayer</div>
-                                    <div>• Single player</div>
-                                    <div>• Hand-drawn assets</div>
-                                    <div>• Web socket comm.</div>
-                                </div>
-                            </div>
-
-                            <!-- ACTIONS & INFO -->
-                            <div class="h-[200px] flex flex-col border border-dashed border-melonRind bg-mintGlint/30 rounded-sm">
-                                <h3
-                                    class="text-lg text-left text-pretty font-blockBlueprint text-mossGreen mb-1 bg-melonRind/20 py-1 px-2 border-b border-dashed border-melonRind"
-                                >
-                                    LINKS
-                                </h3>
-                                <div class="flex-1 overflow-y-auto p-1 space-y-2">
-                                    <div class="flex flex-col gap-1">
-                                        <button
-                                            class="text-md px-2 py-1 bg-melonRind/20 border border-dashed border-melonRind text-cocoaBrown font-blockBlueprint hover:bg-melonRind/40"
-                                        >
-                                            VIEW LIVE
-                                        </button>
-                                        <button
-                                            class="text-md px-2 py-1 bg-mossGreen/20 border border-dashed border-mossGreen text-cocoaBrown font-blockBlueprint hover:bg-mossGreen/40"
-                                        >
-                                            GITHUB
-                                        </button>
-                                    </div>
-                                    <div class="border-t border-dashed border-melonRind pt-2 text-md text-cocoaBrown">
-                                        <div class="flex justify-between">
-                                            <span class="font-blockBlueprint text-mossGreen">YEAR:</span>
-                                            <span>2025</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- EXPLORER SHELL -->
+        <div class="">
+            <div class="flex flex-col rounded-[10px] bg-vanillaCream border-[2px] border-milkTeaBrown [border-style:inset]">
+                <!-- TOP TOOLBAR -->
+                <div
+                    class="border flex rounded-sm items-center gap-2 px-3 py-2 bg-vanilla border-b-[2px] border-milkTeaBrown [border-bottom-style:inset]"
+                >
+                    <!-- VIEW BUTTONS (NON-FUNCTIONAL FOR NOW)-->
+                    <div class="border flex rounded-sm p-1 border-blushPink items-center gap-2">
+                        <div class="flex flex-row gap-1  border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText">
+                            <button class="px-2 bg-whisperPink grid place-items-center">☰</button>
+                            <button class="px-3 bg-whisperPink grid place-items-center">◫</button>
+                            <button class="px-2 bg-whisperPink grid place-items-center">▣</button>
                         </div>
                     </div>
 
-                    <!-- END PEARL PROJECT -->
+                    <!-- FOLDER PATHS -->
+                    <div class="flex-1 flex items-center gap-2 px-3 py-1 bg-vanillaCream border-[2px] border-milkTeaBrown">
+                        <span class="px-3 py-[2px] border-[2px] border-bone bg-vanilla font-blockBlueprint text-sm text-cocoaText">Desktop</span>
+                        <span class="px-3 py-[2px] border-[2px] border-bone bg-sweetPink font-blockBlueprint text-sm text-cocoaText">Projects</span>
+                    </div>
+
+                    <!-- SEARCH BUTTON (NON-FUNCTIONAL FOR NOW) -->
+                    <div class="flex items-center gap-2">
+                        <button class="grid place-items-center px-3 bg-vanillaCream border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText">
+                            ⌕
+                        </button>
+                    </div>
                 </div>
 
-                <!-- PEARL PROJECT -->
-                <input type="radio" id="tab-2" name="tabs" />
-                <label for="tab-2" class="px-5 mx-1 rounded-t-sm">DATA</label>
+                <!-- FOLDER SECTION -->
+                <div class="flex-1 p-4 bg-vanillaCream">
+                    <div class="w-full"></div>
+                </div>
 
-                <!-- TAB CONTENT -->
-                <div class="tab overflow-y-auto"></div>
-
-                <!-- CASSANDRA DB PROJECT -->
-                <input type="radio" id="tab-3" name="tabs" />
-                <label for="tab-3" class="px-5 mx-1 rounded-t-sm">GAMES</label>
-
-                <!-- TAB CONTENT -->
-                <div class="tab overflow-y-auto"></div>
-
-                <!-- POMODORO PROJECT -->
-                <input type="radio" id="tab-4" name="tabs" />
-                <label for="tab-4" class="px-5 mx-1 rounded-t-sm">CYBERSECURITY</label>
-
-                <!-- TAB CONTENT -->
-                <div class="tab overflow-y-auto"></div>
+                <!-- FINDER FOOTER -->
+                <div
+                    class="flex justify-between px-3 py-2 bg-vanilla border-t-[2px] border-milkTeaBrown [border-top-style:inset] font-blockBlueprint text-xs text-cocoaText"
+                >
+                    <span>__ folders</span>
+                    <span>Ready</span>
+                </div>
             </div>
         </div>
+
+        <script src="/src/js/projects.js"></script>
     </body>
 </html>
