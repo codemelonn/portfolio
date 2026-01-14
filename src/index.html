@@ -20,7 +20,7 @@
         });
     </script>
 
-    <body class="font-MicrosoftOG text-cocoaText min-w-full min-h-screen">
+    <body class="font-NDS text-cocoaText min-w-full min-h-screen">
         <!-- begin screen  -->
         <!-- main-frame -->
         <div class="main-frame fixed rounded-lg z-0 w-screen h-screen">
@@ -28,7 +28,7 @@
             <div class="main-frame-wrapper flex flex-col h-full">
                 <!-- begin top-bar-container -->
 
-                <!-- emulates the top part of a desktop -->
+                <!-- TOP BAR DESKTOP EMULATION -->
                 <div class="top-bar-container text-nowrap fixed bg-vanillaCream z-10 w-full h-9 rounded-t-md">
                     <!-- top bar elements here  -->
                     <div class="top-bar h-10 flex flex-row text-xl shadow-inner">
@@ -59,8 +59,7 @@
                     </div>
                 </div>
 
-                <!-- begin desktop-container -->
-                <!-- environment to emulate the desktop screen -->
+                <!-- DESKTOP CONTAINER -->
                 <div class="desktop-container flex flex-row mt-9 h-[calc(100vh-36px)] bg-blushMilk">
                     <!-- left-pane -->
                     <div class="left-pane overflow-hidden relative w-[86%] text-center">
@@ -69,7 +68,7 @@
                             <div class="title-bar">
                                 <div class="title-bar-text">WELCOME TO MY PORTFOLIO</div>
                                 <div class="title-bar-controls">
-                                    <button aria-label="Close" class="close-window">✕</button>
+                                    <button class="close-window">x</button>
                                 </div>
                             </div>
                             <div class="window-body h-full overflow-y-auto">
@@ -104,29 +103,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="window-footer">
-                                <div class="scroll-left">◀</div>
-                                <div class="scroll-bar"></div>
-                                <div class="scroll-right">▶</div>
-                            </div>
+                            <div class="window-footer"></div>
                         </div>
 
                         <!-- BEGIN WINDOW DIVS -->
 
-                        <!-- SKILLS PAGE -->
-                        <div class="window hidden w-[900px] h-[500px]" data-page="skills">
+                        <!-- MUSIC PLAYER PAGE -->
+                        <div class="window hidden w-[900px] h-[500px]" data-page="music_player">
                             <div class="title-bar">
                                 <div class="title-bar-text"></div>
                                 <div class="title-bar-controls">
-                                    <button aria-label="Close" class="close-window">✕</button>
+                                    <button class="close-window">x</button>
                                 </div>
                             </div>
                             <div class="window-body h-[500px] overflow-y-auto"></div>
-                            <div class="window-footer">
-                                <div class="scroll-left">◀</div>
-                                <div class="scroll-bar"></div>
-                                <div class="scroll-right">▶</div>
-                            </div>
+                            <div class="window-footer"></div>
                         </div>
 
                         <!-- ABOUT ME PAGE -->
@@ -138,11 +129,7 @@
                                 </div>
                             </div>
                             <div class="window-body h-[88%]"></div>
-                            <div class="window-footer">
-                                <div class="scroll-left">◀</div>
-                                <div class="scroll-bar"></div>
-                                <div class="scroll-right">▶</div>
-                            </div>
+                            <div class="window-footer"></div>
                         </div>
 
                         <!-- PROJECTS PAGE -->
@@ -154,11 +141,7 @@
                                 </div>
                             </div>
                             <div class="window-body h-[89%]"></div>
-                            <div class="window-footer">
-                                <div class="scroll-left">◀</div>
-                                <div class="scroll-bar"></div>
-                                <div class="scroll-right">▶</div>
-                            </div>
+                            <div class="window-footer"></div>
                         </div>
 
                         <!-- CONTACT ME PAGE -->
@@ -166,21 +149,17 @@
                             <div class="title-bar">
                                 <div class="title-bar-text pl-3"></div>
                                 <div class="title-bar-controls">
-                                    <button aria-label="Close" class="close-window">✕</button>
+                                    <button class="close-window">x</button>
                                 </div>
                             </div>
                             <div class="window-body"></div>
-                            <div class="window-footer">
-                                <div class="scroll-left">◀</div>
-                                <div class="scroll-bar"></div>
-                                <div class="scroll-right">▶</div>
-                            </div>
+                            <div class="window-footer"></div>
                         </div>
                     </div>
 
                     <!-- RIGHT PANE -->
                     <div class="right-pane w-[14%] flex flex-col justify-start items-center">
-                        <!-- BEGIN TAB ICONS -->
+                        <!-- BEGIN ICONS -->
                         <div class="grid grid-cols-1 grid-rows-5 gap-0 w-full h-full">
                             <!-- ABOUT ME ICON -->
                             <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
@@ -197,13 +176,13 @@
                             <div class="flex flex-col justify-center items-center m-3 mx-9 hover:border-2 border-dashed border-milkTeaBrown">
                                 <img
                                     src="/assets/icons/ipod.png"
-                                    alt="flop_drive"
+                                    alt="ipod"
                                     class="icon-image w-[60%] peer cursor-pointer z-10 relative"
-                                    onclick="loadhtml('skills')"
+                                    onclick="loadhtml('music_player')"
                                     onmouseover="this.src='/assets/icons/ipod_ani.png'"
                                     onmouseout="this.src='/assets/icons/ipod.png'"
                                 />
-                                <p class="leading-none text-md mt-0">Skills</p>
+                                <p class="leading-none text-md mt-0">Music Player</p>
                             </div>
 
                             <!-- PROJECTS ICON -->
@@ -262,7 +241,7 @@
                             <div
                                 class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"
                             >
-                                SKILLS
+                                MUSIC PLAYER
                             </div>
                             <div
                                 class="footer-elem hidden bg-vanilla cursor-pointer border py-1 px-4 border-r-cocoaBrown border-b-cocoaBrown border-t-sweeterPink border-l-sweeterPink border-solid rounded-lg hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-md-"

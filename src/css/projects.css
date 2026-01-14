@@ -1,57 +1,7 @@
-.tab-container input[type="radio"] {
-    display: none;
-}
+/* =====================================================
+   MELON OS FILE EXPLORER STYLING
+   -----------------------------------------------------
+   Compact pixel-style grid, inset folder icons,
+   no vertical stretching. Uses warm retro palette.
+   ===================================================== */
 
-.tab-container label {
-    background-color: var(--moss-green);
-    color: var(--vanilla);
-    font-family: "Block Blueprint", sans-serif;
-    cursor: pointer;
-    position: relative;
-}
-
-.tab-container .tab {
-    width: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        var(--sweet-pink) 0px,
-        var(--sweet-pink) 2px,
-        var(--sweeter-pink) 2px,
-        var(--sweeter-pink) 4px
-    );
-    order: 1;
-    display: none;
-}
-
-.tab-container input[type="radio"]:checked + label + .tab {
-    display: block;
-}
-
-.tab-container input[type="radio"]:checked + label {
-    background: var(--kombu-green);
-    color: var(--mint-dust);
-}
-
-/* fun button looking adjectives! */
-
-.adj {
-    background-color: var(--vanilla-cream);
-    position: relative;
-    display: inline-block;
-    padding: 3px 15px;      /* top and bottom */ 
-    border: 1px solid var(--moss-green);
-    border-radius: 15px;
-}
-
-
-.adj:focus::after, 
-.adj:hover::after {
-    content: attr(data-adjTip);
-    position: absolute;
-    opacity: 1;
-    visibility: visible;
-
-    
-    min-width: max-content;
-    z-index: 20;
-}
