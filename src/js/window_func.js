@@ -57,13 +57,14 @@ let zIndexCounter = 100;
 
 async function loadhtml(name) {
     const container = document.querySelector(`.window[data-page="${name}"]`);
-    const body = container.querySelector(".window-body");
-    const title = container.querySelector(".title-bar-text");
 
     if (!container) {
         console.error(`No window container found for ${name}`);
         return;
     }
+
+    const body = container.querySelector(".window-body");
+    const title = container.querySelector(".title-bar-text");
 
     // Show the window || bring to front || update title bar
     container.classList.remove("hidden");
@@ -87,14 +88,31 @@ async function loadhtml(name) {
         const updatedName = name.toLowerCase().replaceAll(" ", "_");
         const res = await fetch(`./pages/${updatedName}.html`);
         if (!res.ok) throw new Error(`Failed to load ${updatedName}`);
+
         const html = await res.text();
         body.innerHTML = html;
+        body.dataset.loadedPage = name;
+
+        // Projects: always initialize after injection (resets to folder view)
+        // if (name === "projects" && typeof window.initProjects === "function") {
+        //     window.initProjects(body);
+        // }
+
+        // DEV: auto-open a folder while editing Projects
+        if (name === "projects") {
+            const folderEl = body.querySelector('[data-folder="webdev"]');
+            if (folderEl) folderEl.click();
+        }
+        
     } catch (err) {
         console.error(err);
     }
 
-    // Make this window come to front on click
-    container.addEventListener("mousedown", () => {
-        container.style.zIndex = ++zIndexCounter;
-    });
+    // Make this window come to front on click (bind ONCE)
+    if (!container.dataset.boundZIndex) {
+        container.addEventListener("mousedown", () => {
+            container.style.zIndex = ++zIndexCounter;
+        });
+        container.dataset.boundZIndex = "true";
+    }
 }

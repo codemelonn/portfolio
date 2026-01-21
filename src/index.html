@@ -7,6 +7,7 @@
         <!-- tailwind compiled css -->
         <link rel="stylesheet" href="../dist/output.css" />
         <link rel="stylesheet" href="/src/css/window.css" />
+        <link rel="stylesheet" href="/src/css/projects.css" />
 
         <!-- Font Awesome 6 Free -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
@@ -71,6 +72,8 @@
                                     <button class="close-window">x</button>
                                 </div>
                             </div>
+
+                            <!-- WELCOME WINDOW ! -->
                             <div class="window-body h-full overflow-y-auto">
                                 <!-- WELCOME CONTENT -->
                                 <div class="grid grid-cols-[1fr_1fr] grid-rows-[max-content_max-content] gap-y-3 w-full pb-4">
@@ -106,7 +109,9 @@
                             <div class="window-footer"></div>
                         </div>
 
-                        <!-- BEGIN WINDOW DIVS -->
+                        <!-- ==================== 
+                            BEGIN WINDOW DIVS 
+                        ===================== -->
 
                         <!-- MUSIC PLAYER PAGE -->
                         <div class="window hidden w-[900px] h-[500px]" data-page="music_player">
@@ -140,7 +145,10 @@
                                     <button class="close-window">x</button>
                                 </div>
                             </div>
-                            <div class="window-body h-[89%]"></div>
+                            <!-- 
+                                Inner window size
+                            -->
+                            <div class="window-body h-[98%]"></div>
                             <div class="window-footer"></div>
                         </div>
 
@@ -263,5 +271,6 @@
         <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
         <script src="/src/js/window_func.js"></script>
         <script src="/src/js/desktop_ui.js"></script>
+        <script src="/src/js/projects.js"></script>
     </body>
 </html>

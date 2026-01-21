@@ -1,112 +1,325 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Projects</title>
-        <link rel="stylesheet" href="/src/css/styles.css" />
-        <link rel="stylesheet" href="/src/css/projects.css" />
-    </head>
-    <body class="h-full overflow-hidden">
-        <!-- EXPLORER SHELL -->
-        <div class="h-full flex flex-col">
-            <div class="flex flex-col mx-2 h-full rounded-[5px] bg-vanillaCream border-[2px] border-roseBlush [border-style:inset]">
-                <!-- TOP TOOLBAR -->
-                <div
-                    class="border flex rounded-sm items-center gap-2 px-2 py-2 bg-vanilla border-b-[2px] border-milkTeaBrown [border-bottom-style:inset]"
-                >
-                    <!-- VIEW BUTTONS (NON-FUNCTIONAL FOR NOW)-->
-                    <div class="flex rounded-sm p-1 items-center gap-2">
-                        <div class="flex flex-row gap-1 font-blockBlueprint text-lg text-cocoaText">
-                            <button class="px-2 bg-whisperPink grid place-items-center">☰</button>
-                            <button class="px-3 bg-whisperPink grid place-items-center">◫</button>
-                            <button class="px-2 bg-whisperPink grid place-items-center">▣</button>
-                        </div>
-                    </div>
+<!-- ========================================================
+ Fragmented code injected into index.html for projects window
+ Necessary in order to allow styling conventions 
+========================================================== -->
 
-                    <!-- FOLDER PATHS -->
-                    <div class="flex-1 flex items-center gap-2 px-3 py-1 bg-vanillaCream border-[1px] border-sweetPink">
-                        <span class="px-3 py-[2px] font-blockBlueprint text-sm text-cocoaText">Desktop</span>
-                        <span class="text-cocoaText text-lg">></span>
-                        <span class="px-3 py-[2px] bg-vanilla font-blockBlueprint text-sm text-cocoaText rounded-full">Projects</span>
-                    </div>
+<!-- EXPLORER SHELL -->
+<div class="h-full flex flex-col">
+    <div class="flex flex-col mx-2 h-full rounded-[5px] bg-vanillaCream border-[2px] border-roseBlush [border-style:inset]">
+        <!-- TOP TOOLBAR -->
+        <div class="border flex rounded-sm items-center gap-2 px-2 py-2 bg-vanilla border-b-[2px] border-milkTeaBrown [border-bottom-style:inset]">
+            <!-- VIEW BUTTONS (NON-FUNCTIONAL FOR NOW)-->
+            <div class="flex rounded-sm p-1 items-center gap-2">
+                <div class="flex flex-row gap-1 font-blockBlueprint text-lg text-cocoaText">
+                    <button class="px-2 bg-whisperPink grid place-items-center">☰</button>
+                    <button class="px-3 bg-whisperPink grid place-items-center">◫</button>
+                    <button class="px-2 bg-whisperPink grid place-items-center">▣</button>
+                </div>
+            </div>
 
-                    <!-- SEARCH BUTTON (NON-FUNCTIONAL FOR NOW) -->
-                    <div class="flex items-center gap-2">
-                        <button
-                            class="grid place-items-center px-[10px] bg-whisperPink border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText"
+            <!-- FOLDER PATHS -->
+            <div class="flex-1 flex items-center gap-2 px-3 py-1 bg-vanillaCream border-[1px] border-sweetPink">
+                <span class="px-3 py-[2px] font-blockBlueprint text-sm text-cocoaText">Desktop</span>
+                <span class="text-cocoaText text-lg">></span>
+                <span id="projectsCrumb" class="px-3 py-[2px] bg-vanilla font-blockBlueprint text-sm text-cocoaText rounded-full">Projects</span>
+
+                <!-- CRUMBS FOR PATH ACCURACY -->
+                <span id="folderChevron" class="hidden text-cocoaText text-lg">></span>
+                <span id="folderCrumb" class="hidden px-3 py-[2px] bg-vanilla font-blockBlueprint text-sm text-cocoaText rounded-full"></span>
+            </div>
+
+            <!-- SEARCH BUTTON (NON-FUNCTIONAL FOR NOW) -->
+            <div class="flex items-center gap-2">
+                <button class="grid place-items-center px-[10px] bg-whisperPink border-milkTeaBrown font-blockBlueprint text-lg text-cocoaText">
+                    ⌕
+                </button>
+            </div>
+        </div>
+
+        <!-- FOLDER CONTENT -->
+        <div class="flex-1 min-h-0 bg-vanillaCream p-4 overflow-hidden">
+            <!-- FOLDER CONTAINER -->
+            <div id="explorerContent" class="h-full overflow-hidden">
+                <!-- VIEW 1: FOLDERS GRID -->
+                <div id="view-folders" class="h-full overflow-y-auto">
+                    <div class="h-full grid grid-cols-4 gap-y-8 justify-items-center py-2">
+                        <!-- WEB DEVELOPMENT ICON -->
+                        <div
+                            data-folder="webdev"
+                            class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            ⌕
-                        </button>
-                    </div>
-                </div>
+                            <img src="/assets/icons/folder.png" alt="custom folder" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Web Development</p>
+                        </div>
 
-                <!-- FOLDER CONTENT -->
-                <div class="flex-1 min-h-0 bg-vanillaCream p-4 overflow-hidden">
-                    <!-- FOLDER CONTAINER -->
-                    <div class="h-full overflow-y-auto">
-                        <div class="h-full grid grid-cols-4 gap-y-8 justify-items-center py-2">
-                            <!-- WEB DEVELOPMENT ICON -->
-                            <div
-                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
-                            >
-                                <img src="/assets/icons/folder.png" alt="custom folder" class="w-[80px] icon-image" />
-                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Web Development</p>
-                            </div>
+                        <!-- DATABASE ICON -->
+                        <div
+                            data-folder="database"
+                            class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                        >
+                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Database</p>
+                        </div>
 
-                            <!-- DATABASE ICON -->
-                            <div
-                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
-                            >
-                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Database</p>
-                            </div>
+                        <!-- CYBERSECURITY ICON -->
+                        <div
+                            data-folder="cybersec"
+                            class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                        >
+                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Cybersecurity</p>
+                        </div>
 
-                            <!-- CYBERSECURITY ICON -->
-                            <div
-                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
-                            >
-                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Cybersecurity</p>
-                            </div>
+                        <!-- DIGITAL FORENSICS ICON -->
+                        <div
+                            data-folder="forensics"
+                            class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                        >
+                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Digital Forensics</p>
+                        </div>
 
-                            <!-- DIGITAL FORENSICS ICON -->
-                            <div
-                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
-                            >
-                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Digital Forensics</p>
-                            </div>
+                        <!-- SOFTWARE DEVELOPMENT ICON -->
+                        <div
+                            data-folder="softdev"
+                            class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                        >
+                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Software Development</p>
+                        </div>
 
-                            <!-- SOFTWARE DEVELOPMENT ICON -->
-                            <div
-                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
-                            >
-                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Software Development</p>
-                            </div>
-
-                            <!-- GAMES ICON -->
-                            <div
-                                class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
-                            >
-                                <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                                <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Games</p>
-                            </div>
+                        <!-- GAMES ICON -->
+                        <div
+                            data-folder="games"
+                            class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
+                        >
+                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Games</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FINDER FOOTER -->
-                <div
-                    class="flex justify-between px-3 py-2 bg-vanilla border-t-[2px] border-milkTeaBrown [border-top-style:inset] font-blockBlueprint text-xs text-cocoaText"
-                >
-                    <span>__ folders</span>
-                    <span>Ready</span>
+                <!-- VIEW 2: OPEN FOLDER CONTENT -->
+                <div id="view-folder" class="hidden h-full overflow-y-auto">
+                    <!-- This is where templates get mounted -->
+                    <div id="folderMount" class="h-full"></div>
                 </div>
             </div>
         </div>
 
-        <script src="/src/js/projects.js"></script>
-    </body>
-</html>
+        <!-- FINDER FOOTER -->
+        <div
+            class="flex justify-between px-3 py-2 bg-vanilla border-t-[2px] border-milkTeaBrown [border-top-style:inset] font-blockBlueprint text-xs text-cocoaText"
+        >
+            <span>__ folders</span>
+            <span>Ready</span>
+        </div>
+    </div>
+</div>
+
+<!-- =========================
+            FOLDER VIEWS (TEMPLATES)
+        ========================= -->
+
+<template id="tpl-webdev">
+    <!-- OUTERMOST CONTAINER -->
+    <div class="h-full min-h-0 flex flex-col">
+        <!-- BACK BUTTON -->
+        <button
+            data-action="back"
+            class="mb-3 px-3 py-1 rounded-sm bg-whisperPink border border-milkTeaBrown text-cocoaText font-blockBlueprint text-sm hover:underline w-fit"
+        >
+            ← Back
+        </button>
+
+        <!-- TWO-PANE LAYOUT -->
+        <div class="h-full min-h-0 grid grid-cols-[1fr_4fr] gap-3">
+            <!-- LEFT PANE (NAV) -->
+            <aside class="min-h-0 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm p-2 overflow-y-auto">
+                <div class="font-blockBlueprint text-sm text-cocoaText mb-2">Web Dev</div>
+
+                <!-- Nav items: data-target must match the section ids on the right -->
+                <div class="flex flex-col gap-1">
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webdev-bias-checker">
+                        Bias Checker
+                    </button>
+
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webdev-melon-os">
+                        Melon OS Portfolio
+                    </button>
+
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webdev-music-letterbox">
+                        Music Letterbox
+                    </button>
+                </div>
+            </aside>
+
+            <!-- RIGHT PANE (SCROLL AREA) -->
+            <main
+                class=" min-h-0 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm overflow-y-auto p-3"
+                data-scroll-container="projects"
+            >
+                <!-- PROJECT SECTION 1 -->
+                <section
+                    id="webdev-bias-checker"
+                    class="project-section scroll-mt-3 pb-8 border-b border-milkTeaBrown/30"
+                    data-project-section
+                    data-project-key="webdev-bias-checker"
+                >
+                    <h2 class="font-blockBlueprint text-xl text-cocoaText">Bias Checker</h2>
+
+                    <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">React</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">FastAPI</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Docker</span>
+                    </div>
+
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Date: 2025</div>
+
+                    <!-- Media placeholder -->
+                    <div
+                        class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
+                    >
+                        Image / Video Placeholder
+                    </div>
+
+                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">
+                        Description goes here. Keep it concise but informative. Explain what it does, what you built, and why it matters.
+                    </p>
+                </section>
+
+                <!-- PROJECT SECTION 2 -->
+                <section
+                    id="webdev-melon-os"
+                    class="project-section scroll-mt-3 py-8 border-b border-milkTeaBrown/30"
+                    data-project-section
+                    data-project-key="webdev-melon-os"
+                >
+                    <h2 class="font-blockBlueprint text-xl text-cocoaText">Melon OS Portfolio</h2>
+
+                    <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">HTML</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Tailwind</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Vanilla JS</span>
+                    </div>
+
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Date: 2026</div>
+
+                    <div
+                        class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
+                    >
+                        Image / Video Placeholder
+                    </div>
+
+                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">Description goes here.</p>
+                </section>
+
+                <!-- PROJECT SECTION 3 -->
+                <section
+                    id="webdev-music-letterbox"
+                    class="project-section scroll-mt-3 py-8"
+                    data-project-section
+                    data-project-key="webdev-music-letterbox"
+                >
+                    <h2 class="font-blockBlueprint text-xl text-cocoaText">Music Letterbox</h2>
+
+                    <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Node</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">MongoDB</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Last.fm API</span>
+                    </div>
+
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Date: 2025</div>
+
+                    <div
+                        class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
+                    >
+                        Image / Video Placeholder
+                    </div>
+
+                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">Description goes here.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-database">
+    <div class="h-full">
+        <button
+            data-action="back"
+            class="mb-3 px-3 py-1 rounded-sm bg-whisperPink border border-milkTeaBrown text-cocoaText font-blockBlueprint text-sm hover:underline"
+        >
+            ← Back
+        </button>
+
+        <div class="p-3 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm">
+            <div class="font-blockBlueprint text-base text-cocoaText mb-2">Database</div>
+            <div class="text-sm text-cocoaText opacity-80">Put your DB projects here.</div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-cybersec">
+    <div class="h-full">
+        <button
+            data-action="back"
+            class="mb-3 px-3 py-1 rounded-sm bg-whisperPink border border-milkTeaBrown text-cocoaText font-blockBlueprint text-sm hover:underline"
+        >
+            ← Back
+        </button>
+
+        <div class="p-3 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm">
+            <div class="font-blockBlueprint text-base text-cocoaText mb-2">Database</div>
+            <div class="text-sm text-cocoaText opacity-80">Put your DB projects here.</div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-forensics">
+    <div class="h-full">
+        <button
+            data-action="back"
+            class="mb-3 px-3 py-1 rounded-sm bg-whisperPink border border-milkTeaBrown text-cocoaText font-blockBlueprint text-sm hover:underline"
+        >
+            ← Back
+        </button>
+
+        <div class="p-3 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm">
+            <div class="font-blockBlueprint text-base text-cocoaText mb-2">Database</div>
+            <div class="text-sm text-cocoaText opacity-80">Put your DB projects here.</div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-softdev">
+    <div class="h-full">
+        <button
+            data-action="back"
+            class="mb-3 px-3 py-1 rounded-sm bg-whisperPink border border-milkTeaBrown text-cocoaText font-blockBlueprint text-sm hover:underline"
+        >
+            ← Back
+        </button>
+
+        <div class="p-3 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm">
+            <div class="font-blockBlueprint text-base text-cocoaText mb-2">Database</div>
+            <div class="text-sm text-cocoaText opacity-80">Put your DB projects here.</div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-games">
+    <div class="h-full">
+        <button
+            data-action="back"
+            class="mb-3 px-3 py-1 rounded-sm bg-whisperPink border border-milkTeaBrown text-cocoaText font-blockBlueprint text-sm hover:underline"
+        >
+            ← Back
+        </button>
+
+        <div class="p-3 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm">
+            <div class="font-blockBlueprint text-base text-cocoaText mb-2">Database</div>
+            <div class="text-sm text-cocoaText opacity-80">Put your DB projects here.</div>
+        </div>
+    </div>
+</template>
