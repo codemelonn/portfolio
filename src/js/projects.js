@@ -2,15 +2,13 @@
 // MELON OS PROJECTS WINDOW LOGIC (INIT ON DEMAND)
 // =====================================================
 
-
-
 // Map folder keys to template ids
 const TEMPLATE_IDS = {
-    webdev: "tpl-webdev",
+    webandsoft: "tpl-webandsoft",
     database: "tpl-database",
     cybersec: "tpl-cybersec",
-    forensics: "tpl-forensics",
-    softdev: "tpl-softdev",
+    systems: "tpl-systems",
+    techknowledge: "tpl-techknowledge",
     games: "tpl-games",
 };
 
@@ -26,8 +24,6 @@ document.addEventListener("click", (e) => {
     const explorerContent = body.querySelector("#explorerContent");
     if (!explorerContent) return;
 
-
-
     // -----------------------------------------------------
     // 2) Folder click -> swap explorerContent to template
     // -----------------------------------------------------
@@ -37,41 +33,40 @@ document.addEventListener("click", (e) => {
         const tplId = TEMPLATE_IDS[key];
         const tpl = tplId ? body.querySelector(`#${tplId}`) : null;
         if (!tpl) return;
-    
+
         const viewFolders = body.querySelector("#view-folders");
         const viewFolder = body.querySelector("#view-folder");
         const folderMount = body.querySelector("#folderMount");
         if (!viewFolders || !viewFolder || !folderMount) return;
-    
+
         // mount template content
         folderMount.innerHTML = "";
         folderMount.appendChild(tpl.content.cloneNode(true));
-    
+
         // toggle views
         viewFolders.classList.add("hidden");
         viewFolder.classList.remove("hidden");
-    
+
         // breadcrumb update
         const folderChevron = body.querySelector("#folderChevron");
         const folderCrumb = body.querySelector("#folderCrumb");
         if (folderChevron && folderCrumb) {
             folderChevron.classList.remove("hidden");
             folderCrumb.classList.remove("hidden");
-    
+
             const labels = {
-                webdev: "Web Development",
+                webandsoft: "Web Development",
                 database: "Database",
                 cybersec: "Cybersecurity",
-                forensics: "Digital Forensics",
-                softdev: "Software Development",
+                systems: "Digital Forensics",
+                techknowledge: "Software Development",
                 games: "Games",
             };
             folderCrumb.textContent = labels[key] ?? key;
         }
-    
+
         return;
     }
-    
 
     // -----------------------------------------------------
     // 3) Back click -> restore the cached folder grid DOM
@@ -82,14 +77,14 @@ document.addEventListener("click", (e) => {
         const viewFolder = body.querySelector("#view-folder");
         const folderMount = body.querySelector("#folderMount");
         if (!viewFolders || !viewFolder || !folderMount) return;
-    
+
         // clear folder view content (optional but keeps DOM clean)
         folderMount.innerHTML = "";
-    
+
         // toggle views
         viewFolder.classList.add("hidden");
         viewFolders.classList.remove("hidden");
-    
+
         // breadcrumb reset
         const folderChevron = body.querySelector("#folderChevron");
         const folderCrumb = body.querySelector("#folderCrumb");
@@ -99,6 +94,4 @@ document.addEventListener("click", (e) => {
             folderCrumb.textContent = "";
         }
     }
-    
-    
 });

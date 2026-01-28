@@ -100,10 +100,9 @@ async function loadhtml(name) {
 
         // DEV: auto-open a folder while editing Projects
         if (name === "projects") {
-            const folderEl = body.querySelector('[data-folder="webdev"]');
+            const folderEl = body.querySelector('[data-folder="webandsoft"]');
             if (folderEl) folderEl.click();
         }
-        
     } catch (err) {
         console.error(err);
     }

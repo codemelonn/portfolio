@@ -43,13 +43,13 @@
                 <!-- VIEW 1: FOLDERS GRID -->
                 <div id="view-folders" class="h-full overflow-y-auto">
                     <div class="h-full grid grid-cols-4 gap-y-8 justify-items-center py-2">
-                        <!-- WEB DEVELOPMENT ICON -->
+                        <!-- WEB & SOFTWARE ICON -->
                         <div
-                            data-folder="webdev"
+                            data-folder="webandsoft"
                             class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            <img src="/assets/icons/folder.png" alt="custom folder" class="w-[80px] icon-image" />
-                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Web Development</p>
+                            <img src="./assets/icons/folder.png" alt="custom folder" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Web_&_Software</p>
                         </div>
 
                         <!-- DATABASE ICON -->
@@ -57,8 +57,8 @@
                             data-folder="database"
                             class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Database</p>
+                            <img src="./assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Databases</p>
                         </div>
 
                         <!-- CYBERSECURITY ICON -->
@@ -66,26 +66,26 @@
                             data-folder="cybersec"
                             class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <img src="./assets/icons/folder.png" class="w-[80px] icon-image" />
                             <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Cybersecurity</p>
                         </div>
 
-                        <!-- DIGITAL FORENSICS ICON -->
+                        <!-- SYSTEMS ICON -->
                         <div
-                            data-folder="forensics"
+                            data-folder="systems"
                             class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Digital Forensics</p>
+                            <img src="./assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Systems</p>
                         </div>
 
-                        <!-- SOFTWARE DEVELOPMENT ICON -->
+                        <!-- TECHNICAL KNOWLEDGE ICON -->
                         <div
-                            data-folder="softdev"
+                            data-folder="techknowledge"
                             class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
-                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Software Development</p>
+                            <img src="./assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Technical_Knowledge</p>
                         </div>
 
                         <!-- GAMES ICON -->
@@ -93,7 +93,7 @@
                             data-folder="games"
                             class="flex flex-col items-center rounded-md px-3 py-2 border-2 border-dashed border-transparent hover:border-milkTeaBrown hover:bg-vanilla cursor-pointer"
                         >
-                            <img src="/assets/icons/folder.png" class="w-[80px] icon-image" />
+                            <img src="./assets/icons/folder.png" class="w-[80px] icon-image" />
                             <p class="mt-1 text-center text-[14px] leading-tight w-[110px]">Games</p>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
             FOLDER VIEWS (TEMPLATES)
         ========================= -->
 
-<template id="tpl-webdev">
+<template id="tpl-webandsoft">
     <!-- OUTERMOST CONTAINER -->
     <div class="h-full min-h-0 flex flex-col">
         <!-- BACK BUTTON -->
@@ -133,111 +133,145 @@
         </button>
 
         <!-- TWO-PANE LAYOUT -->
-        <div class="h-full min-h-0 grid grid-cols-[1fr_4fr] gap-3">
+        <div class="h-full min-h-0 grid grid-cols-[0.75fr_4fr] gap-3">
             <!-- LEFT PANE (NAV) -->
             <aside class="min-h-0 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm p-2 overflow-y-auto">
-                <div class="font-blockBlueprint text-sm text-cocoaText mb-2">Web Dev</div>
+                <div class="font-blockBlueprint text-sm text-cocoaText mb-2">Web & Software</div>
 
-                <!-- Nav items: data-target must match the section ids on the right -->
                 <div class="flex flex-col gap-1">
-                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webdev-bias-checker">
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webandsoft-bias-checker">
                         Bias Checker
                     </button>
 
-                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webdev-melon-os">
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webandsoft-melon-os">
                         Melon OS Portfolio
                     </button>
 
-                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webdev-music-letterbox">
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webandsoft-music-letterbox">
                         Music Letterbox
+                    </button>
+
+                    <button class="project-nav-item text-left px-2 py-2 rounded-sm hover:bg-whisperPink" data-target="webandsoft-library-app">
+                        Simple Library App
                     </button>
                 </div>
             </aside>
 
-            <!-- RIGHT PANE (SCROLL AREA) -->
+            <!-- RIGHT PANE -->
             <main
-                class=" min-h-0 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm overflow-y-auto p-3"
+                class="min-h-0 bg-vanilla border-[2px] border-milkTeaBrown [border-style:inset] rounded-sm overflow-y-auto p-3"
                 data-scroll-container="projects"
             >
-                <!-- PROJECT SECTION 1 -->
-                <section
-                    id="webdev-bias-checker"
-                    class="project-section scroll-mt-3 pb-8 border-b border-milkTeaBrown/30"
-                    data-project-section
-                    data-project-key="webdev-bias-checker"
-                >
+                <!-- Bias Checker -->
+                <section id="webandsoft-bias-checker" class="project-section scroll-mt-3 pb-8 border-b border-milkTeaBrown/30">
                     <h2 class="font-blockBlueprint text-xl text-cocoaText">Bias Checker</h2>
 
                     <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
-                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">React</span>
-                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">FastAPI</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">NLP</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Python</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Node.js</span>
                         <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Docker</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Tailwind</span>
                     </div>
 
-                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Date: 2025</div>
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Senior Project · Prototype</div>
 
-                    <!-- Media placeholder -->
                     <div
                         class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
                     >
-                        Image / Video Placeholder
+                        Media Placeholder
                     </div>
 
                     <p class="mt-3 text-sm text-cocoaText leading-relaxed">
-                        Description goes here. Keep it concise but informative. Explain what it does, what you built, and why it matters.
+                        An NLP-based web application that analyzes user-submitted text and presents visual insights related to sentiment, toxicity,
+                        and bias. The project focuses on increasing awareness of how tone and language may be perceived by others.
+                        <br />
+                        <br />
+                        I worked as a full-stack developer on this project, contributing to frontend–backend integration, frontend layout and
+                        functionality, and Docker containerization to ensure the application could run seamlessly across environments. I also shared
+                        leadership responsibilities in coordinating development efforts.
                     </p>
                 </section>
 
-                <!-- PROJECT SECTION 2 -->
-                <section
-                    id="webdev-melon-os"
-                    class="project-section scroll-mt-3 py-8 border-b border-milkTeaBrown/30"
-                    data-project-section
-                    data-project-key="webdev-melon-os"
-                >
+                <!-- Melon OS -->
+                <section id="webandsoft-melon-os" class="project-section scroll-mt-3 py-8 border-b border-milkTeaBrown/30">
                     <h2 class="font-blockBlueprint text-xl text-cocoaText">Melon OS Portfolio</h2>
 
                     <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
                         <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">HTML</span>
-                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Tailwind</span>
-                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Vanilla JS</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Tailwind CSS</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">JavaScript</span>
                     </div>
 
-                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Date: 2026</div>
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Personal Project · In Progress</div>
 
                     <div
                         class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
                     >
-                        Image / Video Placeholder
+                        Media Placeholder
                     </div>
 
-                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">Description goes here.</p>
+                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">
+                        A desktop-style web portfolio designed to showcase my academic and technical work through a retro operating system interface.
+                        This project emphasizes strong fundamentals, visual identity, and interactive UI patterns inspired by early personal
+                        computing.
+                        <br />
+                        <br />
+                        I designed and implemented the entire project independently, handling UI/UX design, frontend logic, and overall structure
+                        using core web technologies.
+                    </p>
                 </section>
 
-                <!-- PROJECT SECTION 3 -->
-                <section
-                    id="webdev-music-letterbox"
-                    class="project-section scroll-mt-3 py-8"
-                    data-project-section
-                    data-project-key="webdev-music-letterbox"
-                >
+                <!-- Music Letterbox -->
+                <section id="webandsoft-music-letterbox" class="project-section scroll-mt-3 py-8 border-b border-milkTeaBrown/30">
                     <h2 class="font-blockBlueprint text-xl text-cocoaText">Music Letterbox</h2>
 
                     <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
-                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Node</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Node.js</span>
                         <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">MongoDB</span>
-                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">Last.fm API</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">APIs</span>
                     </div>
 
-                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Date: 2025</div>
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Academic Project · Prototype</div>
 
                     <div
                         class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
                     >
-                        Image / Video Placeholder
+                        Media Placeholder
                     </div>
 
-                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">Description goes here.</p>
+                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">
+                        A social music rating platform inspired by Letterboxd, designed to bring album reviews, lists, and discovery into a shared
+                        social space. Users can create accounts, rate albums, and organize music by artist or genre.
+                        <br />
+                        <br />
+                        I primarily worked on frontend development and visual design, contributing to UI/UX decisions and user-facing components. The
+                        project integrates external music APIs and a MongoDB-backed user system.
+                    </p>
+                </section>
+
+                <!-- Simple Library App -->
+                <section id="webandsoft-library-app" class="project-section scroll-mt-3 py-8">
+                    <h2 class="font-blockBlueprint text-xl text-cocoaText">Simple Library App</h2>
+
+                    <div class="mt-2 flex flex-wrap gap-2 text-xs font-blockBlueprint text-cocoaText">
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">JavaScript</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">REST APIs</span>
+                        <span class="px-2 py-1 bg-whisperPink rounded-sm border border-milkTeaBrown">HTML</span>
+                    </div>
+
+                    <div class="mt-2 text-xs text-cocoaText opacity-80 font-blockBlueprint">Practice Project</div>
+
+                    <div
+                        class="mt-3 h-[160px] bg-vanillaCream border border-milkTeaBrown [border-style:inset] rounded-sm grid place-items-center text-cocoaText text-sm"
+                    >
+                        Media Placeholder
+                    </div>
+
+                    <p class="mt-3 text-sm text-cocoaText leading-relaxed">
+                        A small web application built to practice making REST API calls and working with external data sources. This project served as
+                        an early introduction to API-driven development and client-side data handling.
+                    </p>
                 </section>
             </main>
         </div>
@@ -276,7 +310,7 @@
     </div>
 </template>
 
-<template id="tpl-forensics">
+<template id="tpl-systems">
     <div class="h-full">
         <button
             data-action="back"
@@ -292,7 +326,7 @@
     </div>
 </template>
 
-<template id="tpl-softdev">
+<template id="tpl-techknowledge">
     <div class="h-full">
         <button
             data-action="back"

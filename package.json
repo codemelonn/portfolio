@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/css/styles.css -o ./dist/output.css --minify",
+    "build:copy": "node ./scripts/copy_static.js",
+    "build": "npm run build:css && npm run build:copy"
   },
   "repository": {
     "type": "git",
